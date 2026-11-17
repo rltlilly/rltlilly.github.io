@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosetta Lilly | Professional Portfolio</title>
+  <style>
+    :root {
+      --green: #243b32;
+      --cream: #f8f6f0;
+      --gold: #bc9a66;
+      --text: #303530;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--green);
+      color: white;
+      padding: 22px 8%;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 23px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    nav a:hover { color: var(--gold); }
+
+    .hero {
+      background: var(--green);
+      color: white;
+      padding: 100px 8% 115px;
+    }
+
+    .hero-content { max-width: 850px; }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, serif;
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: clamp(40px, 6vw, 68px);
+      font-weight: normal;
+      margin: 22px 0;
+    }
+
+    .hero p {
+      max-width: 690px;
+      font-size: 18px;
+      color: #e4e9e4;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: #1b2c24;
+      padding: 13px 25px;
+      margin-top: 25px;
+      text-decoration: none;
+      border-radius: 3px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 75px 8%;
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 36px;
+      font-weight: normal;
+      margin-bottom: 18px;
+    }
+
+    .intro { max-width: 850px; }
+
+    .projects {
+      background: #eeece5;
+      max-width: none;
+    }
+
+    .projects-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 4px 18px #0000000c;
+    }
+
+    .card-top {
+      background: var(--green);
+      color: #e8dfcb;
+      padding: 35px 25px;
+      font-family: Georgia, serif;
+      font-size: 24px;
+      min-height: 135px;
+      display: flex;
+      align-items: center;
+    }
+
+    .card-body { padding: 25px; }
+
+    .card-body h3 { margin-top: 0; }
+
+    .tag {
+      color: #80643e;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .skill {
+      background: #e7e4d9;
+      padding: 9px 16px;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+
+    footer {
+      background: var(--green);
+      text-align: center;
+      color: white;
+      padding: 45px 20px;
+    }
+
+    footer a { color: #e1c89d; }
+
+    @media (max-width: 600px) {
+      nav a { margin: 0 15px 0 0; }
+      .hero { padding: 65px 8%; }
+      section { padding: 55px 8%; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">Rosetta Lilly</div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#work">Portfolio</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">
+        Program Leadership | Learning & Development
+      </div>
+      <h1>Designing Learning.<br>Leading Change.<br>Driving Results.</h1>
+      <p>
+        I connect program management, instructional design,
+        curriculum development, and learning technology to
+        create meaningful learning experiences and improve
+        organizational outcomes.
+      </p>
+      <a class="button" href="#work">Explore My Work</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="intro">
+      <div class="eyebrow">About Me</div>
+      <h2>Where Leadership Meets Learning Design</h2>
+      <p>
+        I am an education and learning development leader
+        with experience building and managing online programs,
+        leading curriculum initiatives, and developing
+        engaging digital learning experiences.
+      </p>
+      <p>
+        My work combines strategic planning, instructional
+        design, faculty development, learning technology,
+        and data-informed continuous improvement.
+        I focus on creating practical learning solutions
+        that support people, performance, and organizational goals.
+      </p>
+    </div>
+  </section>
+
+  <section class="projects" id="work">
+    <div class="projects-inner">
+      <div class="eyebrow">Selected Work</div>
+      <h2>Featured Projects</h2>
+      <p>
+        Examples of instructional design, curriculum
+        development, and program leadership.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-top">Inclusive Design Fundamentals</div>
+          <div class="card-body">
+            <div class="tag">Articulate 360 | eLearning</div>
+            <h3>Interactive Learning Module</h3>
+            <p>
+              An interactive module using scenarios,
+              visual content, and knowledge checks
+              to reinforce inclusive design principles.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-top">Curriculum & Program Redesign</div>
+          <div class="card-body">
+            <div class="tag">Program Management | Curriculum</div>
+            <h3>Online Program Development</h3>
+            <p>
+              Led program development, course alignment,
+              assessment design, and curriculum improvements
+              to strengthen career readiness.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-top">Designing Change Together</div>
+          <div class="card-body">
+            <div class="tag">Experiential Learning | Leadership</div>
+            <h3>Real-World Learning Initiative</h3>
+            <p>
+              Connected student learning with nonprofit
+              partnerships and authentic projects that
+              supported professional portfolio development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="expertise">
+    <div class="eyebrow">Core Capabilities</div>
+    <h2>Areas of Expertise</h2>
+    <div class="skills">
+      <span class="skill">Program Management</span>
+      <span class="skill">Learning & Development</span>
+      <span class="skill">Instructional Design</span>
+      <span class="skill">Curriculum Development</span>
+      <span class="skill">Learning Experience Design</span>
+      <span class="skill">Strategic Planning</span>
+      <span class="skill">Learning Analytics</span>
+      <span class="skill">LMS Administration</span>
+      <span class="skill">Faculty & Team Leadership</span>
+      <span class="skill">Continuous Improvement</span>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Let's Connect</h2>
+    <p>Interested in discussing learning, leadership, or program development?</p>
+    <p>Contact details and resume coming soon.</p>
+    <p>© 2026 Rosetta Lilly</p>
+  </footer>
+</body>
+</html>
