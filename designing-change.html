@@ -4,7 +4,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Designing Change Together | Rosetta Lilly</title>
+
+<meta name="description"
+content="Designing Change Together, a community-based learning initiative connecting students with nonprofit organizations through real-world website development, professional interviews, and career preparation.">
+
 <style>
 :root {
   --green: #243b32;
@@ -12,14 +17,25 @@
   --gold: #bc9a66;
   --text: #303530;
 }
-* { box-sizing: border-box; }
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: var(--cream);
   color: var(--text);
   font: 16px/1.75 "Segoe UI", Arial, sans-serif;
 }
-header { background: var(--green); padding: 22px 8%; }
+
+/* NAVIGATION */
+
+header {
+  background: var(--green);
+  padding: 22px 8%;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -27,24 +43,43 @@ nav {
   flex-wrap: wrap;
   gap: 15px;
 }
+
 .logo {
   color: white;
   text-decoration: none;
   font: 23px Georgia, serif;
 }
-.links { display: flex; flex-wrap: wrap; gap: 20px; }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .links a {
   color: white;
   font-size: 14px;
   text-decoration: none;
 }
-.links a:hover, .links a.active { color: #d6b984; }
+
+.links a:hover,
+.links a.active {
+  color: #d6b984;
+}
+
+/* HERO */
+
 .hero {
   background: var(--green);
   color: white;
-  padding: 65px 8%;
+  padding: 70px 8% 80px;
 }
-.hero-inner, main { max-width: 1000px; margin: auto; }
+
+.hero-inner {
+  max-width: 1050px;
+  margin: auto;
+}
+
 .eyebrow {
   color: var(--gold);
   font-size: 12px;
@@ -52,50 +87,253 @@ nav {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-h1, h2 {
+
+h1, h2, h3 {
   font-family: Georgia, serif;
   font-weight: normal;
   line-height: 1.3;
 }
-h1 { font-size: clamp(36px, 5vw, 54px); }
-h2 { font-size: 29px; margin: 0 0 12px; }
-.hero p { color: #e4e9e3; max-width: 720px; }
-main { padding: 65px 8% 90px; }
+
+h1 {
+  font-size: clamp(36px, 5vw, 54px);
+  margin: 15px 0 20px;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 0 0 18px;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 0 0 12px;
+}
+
+.hero p {
+  color: #e4e9e3;
+  max-width: 760px;
+  font-size: 18px;
+}
+
+/* MAIN CONTENT */
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 8% 90px;
+}
+
 section {
-  padding: 20px 0 30px;
+  padding: 30px 0 45px;
   border-bottom: 1px solid #ddd8cd;
 }
-section:last-of-type { border: none; }
-ul { padding-left: 23px; }
-li { margin-bottom: 8px; }
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+section p {
+  max-width: 900px;
+}
+
+ul {
+  padding-left: 23px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* PROCESS CARDS */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin: 30px 0;
+}
+
+.process-card {
+  background: white;
+  padding: 26px;
+  border-radius: 5px;
+  box-shadow: 0 3px 14px #0000000b;
+}
+
+.process-number {
+  color: #947344;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.process-card h3 {
+  color: var(--green);
+}
+
+.process-card p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+/* PROJECT CARDS */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px #0000000c;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-top {
+  background: var(--green);
+  padding: 24px 26px;
+  color: white;
+}
+
+.project-top .small-label {
+  color: #d6b984;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.project-top h3 {
+  color: white;
+  margin: 10px 0 0;
+}
+
+.project-body {
+  padding: 25px 26px 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-body p {
+  font-size: 15px;
+  margin-top: 0;
+}
+
+.project-link {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  padding: 11px 18px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.project-link:hover {
+  background: #365746;
+}
+
+/* IMPACT */
+
 .highlight {
   background: #eeeae0;
   border-left: 4px solid var(--gold);
-  padding: 20px 25px;
+  padding: 25px 30px;
   margin: 25px 0;
 }
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.impact-card {
+  background: white;
+  border-top: 4px solid var(--gold);
+  padding: 24px;
+  border-radius: 4px;
+}
+
+.impact-card h3 {
+  color: var(--green);
+  font-size: 20px;
+}
+
+.impact-card p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* BACK LINK */
+
 .back {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 35px;
   color: #37664d;
   font-weight: bold;
+  text-decoration: none;
 }
+
+.back:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+
 footer {
   background: var(--green);
   color: white;
   text-align: center;
   padding: 30px;
 }
-@media(max-width:650px) {
-  .links { gap: 12px; }
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+  .process-grid,
+  .project-grid,
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .links {
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 55px 8%;
+  }
+
+  main {
+    padding: 45px 8%;
+  }
 }
 </style>
 </head>
+
 <body>
+
+<!-- HEADER -->
 
 <header>
 <nav>
-  <a class="logo" href="index.html">Rosetta Lilly</a>
+
+  <a class="logo" href="index.html">
+    Rosetta Lilly
+  </a>
+
   <div class="links">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -103,82 +341,426 @@ footer {
     <a href="expertise.html">Expertise</a>
     <a href="contact.html">Contact</a>
   </div>
+
 </nav>
 </header>
 
+<!-- HERO -->
+
 <div class="hero">
   <div class="hero-inner">
-    <div class="eyebrow">Program Management & Leadership</div>
+
+    <div class="eyebrow">
+      Program Leadership | Experiential Learning | Career Readiness
+    </div>
+
     <h1>Designing Change Together</h1>
+
     <p>
       Connecting students with nonprofit organizations
-      through authentic design projects and
-      community-based learning.
+      through real-world design projects, professional
+      experiences, and community partnerships.
     </p>
+
   </div>
 </div>
 
 <main>
 
+<!-- PROJECT OVERVIEW -->
+
 <section>
+
   <h2>Project Overview</h2>
+
   <p>
-    Designing Change Together was an initiative that
-    connected design students with nonprofit
-    organizations to work on real-world projects.
+    Designing Change Together was a community-focused
+    initiative I developed and led to connect students
+    with nonprofit organizations through meaningful,
+    real-world design projects.
   </p>
+
   <p>
-    The initiative gave students opportunities to
-    apply their skills beyond classroom assignments
-    while creating work they could include in
-    their professional portfolios.
+    Students had the opportunity to work with actual
+    organizations to design and build websites that
+    addressed their needs. These projects allowed
+    students to apply classroom knowledge, work with
+    clients, and create professional portfolio pieces
+    they could use when pursuing employment.
   </p>
+
+  <p>
+    The experience also incorporated professional
+    preparation. Students were required to submit
+    resumes and participate in interviews, giving
+    them an opportunity to practice skills they
+    would need when entering the design industry.
+  </p>
+
 </section>
 
+<!-- THE CHALLENGE -->
+
 <section>
+
   <h2>The Challenge</h2>
+
   <p>
-    Students needed opportunities to apply their
-    learning to realistic client expectations,
-    collaborate with others, and create meaningful
-    work that demonstrated career readiness.
+    Students often complete academic assignments
+    without experiencing the expectations of
+    working with an actual client.
   </p>
+
+  <p>
+    I wanted to provide opportunities for students
+    to develop more than technical design skills.
+    They also needed experience preparing resumes,
+    participating in interviews, communicating
+    professionally, understanding client needs,
+    and producing work they could confidently
+    discuss with future employers.
+  </p>
+
+  <p>
+    At the same time, nonprofit organizations
+    could benefit from student design talent
+    and support with their digital presence.
+  </p>
+
 </section>
 
+<!-- MY LEADERSHIP ROLE -->
+
 <section>
-  <h2>My Role & Approach</h2>
+
+  <h2>My Leadership Role</h2>
+
+  <p>
+    I developed and led Designing Change Together
+    as an initiative that connected curriculum,
+    community engagement, and career preparation.
+  </p>
+
   <ul>
-    <li>Developed and led the initiative.</li>
-    <li>Connected coursework with community-based projects.</li>
-    <li>Supported collaboration with nonprofit partners.</li>
-    <li>Aligned project experiences with learning objectives.</li>
-    <li>Encouraged practical application of design skills.</li>
-    <li>Helped connect project outcomes to student portfolios.</li>
+
+    <li>
+      Established the initiative and its
+      educational purpose.
+    </li>
+
+    <li>
+      Connected students with nonprofit
+      organizations through authentic
+      design opportunities.
+    </li>
+
+    <li>
+      Integrated professional resume
+      preparation and interview practice
+      into the student experience.
+    </li>
+
+    <li>
+      Connected client-based projects
+      with curriculum learning objectives
+      and practical skill development.
+    </li>
+
+    <li>
+      Supported opportunities for students
+      to experience professional
+      client expectations and collaboration.
+    </li>
+
+    <li>
+      Emphasized the development of
+      completed projects that students
+      could include in their portfolios.
+    </li>
+
   </ul>
+
 </section>
 
+<!-- THE STUDENT EXPERIENCE -->
+
 <section>
-  <h2>Results & Impact</h2>
-  <div class="highlight">
-    <p>
-      Students gained experience applying design skills
-      to authentic projects while creating portfolio
-      artifacts and contributing to nonprofit initiatives.
-    </p>
+
+  <h2>From Interview to Finished Project</h2>
+
+  <p>
+    The initiative gave students experience with
+    several important stages of professional work,
+    beginning with career preparation and
+    continuing through the completion of
+    real-world design projects.
+  </p>
+
+  <div class="process-grid">
+
+    <div class="process-card">
+
+      <div class="process-number">
+        01 / RESUME PREPARATION
+      </div>
+
+      <h3>Preparing for Opportunities</h3>
+
+      <p>
+        Students prepared and submitted resumes,
+        gaining practical experience presenting
+        their skills, education, and qualifications
+        for a professional opportunity.
+      </p>
+
+    </div>
+
+    <div class="process-card">
+
+      <div class="process-number">
+        02 / INTERVIEW EXPERIENCE
+      </div>
+
+      <h3>Practicing Professional Interviews</h3>
+
+      <p>
+        Students participated in interviews,
+        allowing them to practice communicating
+        their strengths, discussing their
+        experience, and presenting themselves
+        in a professional setting.
+      </p>
+
+    </div>
+
+    <div class="process-card">
+
+      <div class="process-number">
+        03 / REAL-WORLD CLIENT PROJECT
+      </div>
+
+      <h3>Applying Design Skills</h3>
+
+      <p>
+        Students worked on website design and
+        development projects for nonprofit
+        organizations, gaining experience
+        creating work for real clients
+        rather than hypothetical assignments.
+      </p>
+
+    </div>
+
+    <div class="process-card">
+
+      <div class="process-number">
+        04 / PROFESSIONAL PORTFOLIO
+      </div>
+
+      <h3>Showcasing Completed Work</h3>
+
+      <p>
+        Students completed websites that
+        could be featured in their professional
+        portfolios, giving them concrete examples
+        of their abilities to share with
+        potential employers.
+      </p>
+
+    </div>
+
   </div>
-  <p>
-    The initiative connected curriculum expectations
-    with practical experience and community engagement.
-  </p>
+
 </section>
 
+<!-- COMMUNITY PARTNERS -->
+
 <section>
-  <h2>Project Examples</h2>
+
+  <h2>Community Partners &amp; Student Projects</h2>
+
   <p>
-    Screenshots or approved examples of student
-    projects can be added here to demonstrate
-    the initiative and its outcomes.
+    Students designed and developed websites
+    for the following nonprofit organizations.
+    These completed projects provided practical
+    experience working on real organizational
+    needs while creating meaningful portfolio
+    pieces.
   </p>
+
+  <div class="project-grid">
+
+    <!-- BARE TRUTH -->
+
+    <div class="project-card">
+
+      <div class="project-top">
+
+        <div class="small-label">
+          Nonprofit Website Project
+        </div>
+
+        <h3>B.A.R.E. Truth Inc.</h3>
+
+      </div>
+
+      <div class="project-body">
+
+        <p>
+          Students designed and built a website
+          for B.A.R.E. Truth Inc., applying their
+          web design and development skills
+          to an actual nonprofit project.
+        </p>
+
+        <p>
+          The finished website provided students
+          with real-world project experience and
+          a tangible example of their work
+          for professional portfolios.
+        </p>
+
+        <a class="project-link"
+           href="https://www.baretruthinc.org/"
+           target="_blank"
+           rel="noopener noreferrer">
+          View Organization Website
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- DEACON WRABEL -->
+
+    <div class="project-card">
+
+      <div class="project-top">
+
+        <div class="small-label">
+          Nonprofit Website Project
+        </div>
+
+        <h3>Deacon Joseph J. Wrabel Foundation</h3>
+
+      </div>
+
+      <div class="project-body">
+
+        <p>
+          Students designed and developed
+          a website for the Deacon Joseph J.
+          Wrabel Foundation as part of the
+          Designing Change Together initiative.
+        </p>
+
+        <p>
+          The project allowed students to
+          apply their learning to a real
+          organization while producing
+          professional work they could
+          showcase in their portfolios.
+        </p>
+
+        <a class="project-link"
+           href="https://www.deaconwrabel.org/dw/"
+           target="_blank"
+           rel="noopener noreferrer">
+          View Organization Website
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <p style="
+    font-size: 13px;
+    color: #74664f;
+    margin-top: 25px;
+  ">
+    These links lead to the organizations'
+    websites. Website content or design
+    may have changed since the original
+    student projects were completed.
+  </p>
+
+</section>
+
+<!-- RESULTS & IMPACT -->
+
+<section>
+
+  <h2>Results &amp; Impact</h2>
+
+  <p>
+    Designing Change Together brought together
+    career preparation, applied learning, and
+    community engagement in a single initiative.
+  </p>
+
+  <div class="impact-grid">
+
+    <div class="impact-card">
+
+      <h3>Career Preparation</h3>
+
+      <p>
+        Students gained experience preparing
+        resumes, participating in interviews,
+        and presenting their qualifications
+        in a professional setting.
+      </p>
+
+    </div>
+
+    <div class="impact-card">
+
+      <h3>Real-World Experience</h3>
+
+      <p>
+        Students developed websites for actual
+        nonprofit organizations and gained
+        experience creating work beyond
+        classroom assignments.
+      </p>
+
+    </div>
+
+    <div class="impact-card">
+
+      <h3>Professional Portfolios</h3>
+
+      <p>
+        Completed projects gave students
+        tangible examples of their skills
+        and work they could showcase
+        to prospective employers.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="highlight">
+
+    <strong>Leadership Impact</strong>
+
+    <p>
+      Through Designing Change Together,
+      I connected academic learning with
+      professional practice and community
+      partnerships. The initiative helped
+      students strengthen their career
+      preparation, gain experience working
+      on real projects, and develop
+      portfolio-ready work while supporting
+      nonprofit organizations.
+    </p>
+
+  </div>
+
 </section>
 
 <a class="back" href="portfolio.html">
@@ -193,4 +775,3 @@ footer {
 
 </body>
 </html>
-
