@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Rosetta Lilly</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #f8f6f0;
+      color: #303530;
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #243b32;
+      color: white;
+      padding: 22px 8%;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      color: white;
+      font-family: Georgia, serif;
+      font-size: 23px;
+      text-decoration: none;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav .links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav .links a:hover,
+    nav .links a.active {
+      color: #d6b984;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 80px 8%;
+    }
+
+    .about-intro {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: #947344;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    h1, h2 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      line-height: 1.3;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 52px);
+      margin: 15px 0;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-top: 45px;
+    }
+
+    p { margin-bottom: 20px; }
+
+    .subtitle {
+      color: #756348;
+      font-weight: 600;
+    }
+
+    .portrait {
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 35%;
+      border-radius: 8px;
+      display: block;
+      margin: auto;
+      box-shadow: 12px 12px 0 #e1d9c9;
+    }
+
+    .highlight {
+      border-left: 3px solid #bc9a66;
+      padding: 15px 25px;
+      margin-top: 35px;
+      background: #eeeae0;
+    }
+
+    footer {
+      background: #243b32;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .about-intro {
+        grid-template-columns: 1fr;
+      }
+
+      main { padding: 50px 8%; }
+
+      .links { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="index.html">Rosetta Lilly</a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="expertise.html">Expertise</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="about-intro">
+    <div>
+      <div class="eyebrow">About Me</div>
+      <h1>Hello, I am Rosetta.</h1>
+      <p class="subtitle">
+        Program Management | Learning & Development |
+        Instructional Design
+      </p>
+
+      <p>
+        My background brings together program leadership,
+        instructional design, curriculum development,
+        and learning technology.
+      </p>
+
+      <p>
+        I have led the development and management of online
+        programs, worked with cross-functional teams,
+        supported faculty development, and redesigned
+        curriculum to create more engaging and
+        career-focused learning experiences.
+      </p>
+
+      <p>
+        I enjoy finding practical ways to improve how
+        people learn and how programs operate, whether
+        that means designing an interactive course,
+        developing a new program, or using data to
+        identify opportunities for improvement.
+      </p>
+    </div>
+
+    <div>
+      <img class="portrait"
+           src="profile.jpg"
+           alt="Portrait of Rosetta Lilly">
+    </div>
+  </div>
+
+  <section>
+    <h2>My Professional Background</h2>
+    <p>
+      My experience includes leading the development
+      and launch of online programs in UX/UI Design,
+      Graphic Design, and Web Design, as well as
+      overseeing curriculum improvements, learning
+      assessments, faculty support, and student success.
+    </p>
+
+    <p>
+      I have worked across the full program lifecycle,
+      from planning and implementation through evaluation
+      and continuous improvement. I use learning analytics,
+      stakeholder feedback, and industry expectations
+      to guide decisions and improve outcomes.
+    </p>
+
+    <div class="highlight">
+      I believe effective learning begins with understanding
+      the people it serves, identifying what needs to improve,
+      and building solutions that make a meaningful difference.
+    </div>
+
+    <h2>What I Bring to the Table</h2>
+    <p>
+      A combination of strategic program leadership
+      and hands-on instructional design experience.
+      I am comfortable developing learning solutions,
+      managing projects, collaborating with stakeholders,
+      and leading teams toward shared goals.
+    </p>
+  </section>
+</main>
+
+<footer>
+  &copy; 2026 Rosetta Lilly | Professional Portfolio
+</footer>
+
+</body>
+</html>
