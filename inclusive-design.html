@@ -4,7 +4,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inclusive Design Fundamentals | Rosetta Lilly</title>
+
+<title>Instructional Design & eLearning | Rosetta Lilly</title>
+
+<meta name="description"
+content="Explore Rosetta Lilly's instructional design work, including complete online course development, Canvas LMS design, authentic assessments, interactive eLearning, and AI-assisted video.">
+
 <style>
 :root {
   --green: #243b32;
@@ -12,14 +17,25 @@
   --gold: #bc9a66;
   --text: #303530;
 }
-* { box-sizing: border-box; }
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: var(--cream);
   color: var(--text);
   font: 16px/1.75 "Segoe UI", Arial, sans-serif;
 }
-header { background: var(--green); padding: 22px 8%; }
+
+/* NAVIGATION */
+
+header {
+  background: var(--green);
+  padding: 22px 8%;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -27,24 +43,43 @@ nav {
   flex-wrap: wrap;
   gap: 15px;
 }
+
 .logo {
-  font: 23px Georgia, serif;
   color: white;
   text-decoration: none;
+  font: 23px Georgia, serif;
 }
-.links { display: flex; gap: 20px; flex-wrap: wrap; }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .links a {
   color: white;
-  font-size: 14px;
   text-decoration: none;
+  font-size: 14px;
 }
-.links a:hover, .links a.active { color: #d6b984; }
+
+.links a:hover,
+.links a.active {
+  color: #d6b984;
+}
+
+/* HERO */
+
 .hero {
   background: var(--green);
   color: white;
-  padding: 65px 8%;
+  padding: 70px 8% 85px;
 }
-.hero-inner, main { max-width: 1000px; margin: auto; }
+
+.hero-inner {
+  max-width: 1050px;
+  margin: auto;
+}
+
 .eyebrow {
   color: var(--gold);
   font-size: 12px;
@@ -52,50 +87,302 @@ nav {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-h1, h2 {
+
+h1, h2, h3 {
   font-family: Georgia, serif;
   font-weight: normal;
   line-height: 1.3;
 }
-h1 { font-size: clamp(36px, 5vw, 54px); }
-h2 { font-size: 29px; margin: 0 0 12px; }
-.hero p { color: #e4e9e3; max-width: 720px; }
-main { padding: 65px 8% 90px; }
+
+h1 {
+  font-size: clamp(36px, 5vw, 54px);
+  margin: 15px 0 20px;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 0 0 18px;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 0 0 12px;
+}
+
+.hero p {
+  color: #e4e9e3;
+  max-width: 800px;
+  font-size: 18px;
+}
+
+/* MAIN CONTENT */
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 8% 90px;
+}
+
 section {
-  padding: 20px 0 30px;
+  padding: 30px 0 50px;
   border-bottom: 1px solid #ddd8cd;
 }
-section:last-of-type { border: none; }
-ul { padding-left: 23px; }
-li { margin-bottom: 8px; }
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+section p {
+  max-width: 900px;
+}
+
+ul {
+  padding-left: 23px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* FEATURED PROJECT */
+
+.featured {
+  background: white;
+  border-left: 5px solid var(--gold);
+  padding: 32px;
+  border-radius: 5px;
+  margin: 28px 0;
+  box-shadow: 0 4px 18px #0000000b;
+}
+
+.featured h3 {
+  color: var(--green);
+  margin-bottom: 16px;
+}
+
+.project-meta {
+  color: #74664f;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* LEARNING DESIGN CARDS */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin: 30px 0;
+}
+
+.card {
+  background: white;
+  padding: 27px;
+  border-radius: 5px;
+  border-top: 4px solid var(--gold);
+  box-shadow: 0 3px 14px #0000000b;
+}
+
+.card h3 {
+  color: var(--green);
+}
+
+.card p {
+  font-size: 15px;
+}
+
+.card-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #947344;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* COURSE DESIGN PROCESS */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.process-card {
+  background: #eeeae0;
+  border-radius: 5px;
+  padding: 24px 19px;
+}
+
+.process-number {
+  font-size: 13px;
+  font-weight: bold;
+  color: #947344;
+  letter-spacing: 1px;
+}
+
+.process-card h3 {
+  color: var(--green);
+  font-size: 19px;
+  margin: 12px 0;
+}
+
+.process-card p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* MODULE EXAMPLES */
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.module-card {
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px #0000000c;
+}
+
+.module-top {
+  background: var(--green);
+  color: white;
+  padding: 25px;
+}
+
+.module-top h3 {
+  color: white;
+  font-size: 21px;
+  margin: 0;
+}
+
+.module-body {
+  padding: 25px;
+}
+
+.module-body p {
+  font-size: 14px;
+}
+
+.module-tool {
+  color: #74664f;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* HIGHLIGHTS */
+
 .highlight {
   background: #eeeae0;
   border-left: 4px solid var(--gold);
-  padding: 20px 25px;
+  padding: 25px 30px;
   margin: 25px 0;
 }
+
+.highlight strong {
+  color: var(--green);
+}
+
+/* VIDEO */
+
+.video-box {
+  background: white;
+  padding: 30px;
+  border-radius: 5px;
+  border-left: 4px solid var(--gold);
+  margin-top: 25px;
+}
+
+.video-box h3 {
+  color: var(--green);
+}
+
+.availability {
+  display: inline-block;
+  background: #eeeae0;
+  color: var(--green);
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+/* BACK LINK */
+
 .back {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 35px;
   color: #37664d;
   font-weight: bold;
+  text-decoration: none;
 }
+
+.back:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+
 footer {
   background: var(--green);
   color: white;
   text-align: center;
   padding: 30px;
 }
-@media(max-width:650px) {
-  .links { gap: 12px; }
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .process-grid,
+  .module-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .card-grid,
+  .process-grid,
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .links {
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 55px 8%;
+  }
+
+  main {
+    padding: 45px 8%;
+  }
+
+  .featured,
+  .video-box {
+    padding: 24px;
+  }
 }
 </style>
 </head>
+
 <body>
+
+<!-- HEADER -->
 
 <header>
 <nav>
-  <a class="logo" href="index.html">Rosetta Lilly</a>
+
+  <a class="logo" href="index.html">
+    Rosetta Lilly
+  </a>
+
   <div class="links">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -103,71 +390,816 @@ footer {
     <a href="expertise.html">Expertise</a>
     <a href="contact.html">Contact</a>
   </div>
+
 </nav>
 </header>
 
+<!-- HERO -->
+
 <div class="hero">
   <div class="hero-inner">
-    <div class="eyebrow">Instructional Design & eLearning</div>
-    <h1>Inclusive Design Fundamentals</h1>
+
+    <div class="eyebrow">
+      Instructional Design | Curriculum Development |
+      Learning Technology
+    </div>
+
+    <h1>Instructional Design &amp; eLearning</h1>
+
     <p>
-      An interactive learning module developed as part
-      of a larger online course in Canvas.
+      Designing and developing online courses,
+      meaningful learning activities, and digital
+      learning experiences that connect
+      instructional objectives with practical
+      application.
     </p>
+
   </div>
 </div>
 
 <main>
 
+<!-- OVERVIEW -->
+
 <section>
-  <h2>Project Overview</h2>
+
+  <h2>Overview</h2>
+
   <p>
-    Understanding Inclusive Design Fundamentals was
-    created to introduce learners to key principles
-    of inclusive design and help them recognize how
-    design decisions affect different users.
+    My instructional design experience includes
+    developing complete online courses,
+    building learning experiences in Canvas,
+    creating assignments and assessments,
+    and incorporating interactive eLearning
+    and multimedia resources.
   </p>
+
   <p>
-    The module uses images, practical examples,
-    real-world scenarios, and interactive quizzes
-    to make the concepts easier to understand.
+    I approach course development by considering
+    what learners need to know, how they will
+    engage with the material, and how they
+    will apply what they have learned.
   </p>
-</section>
 
-<section>
-  <h2>My Role</h2>
   <p>
-    Instructional design, content development,
-    selection of learning activities, and
-    integration into the larger Canvas course.
+    My background in program leadership also
+    gives me a broader perspective on curriculum
+    development. I understand how individual
+    courses fit within a larger program and
+    how consistent design, clear expectations,
+    and appropriate support contribute to
+    the learner experience.
   </p>
+
 </section>
 
-<section>
-  <h2>Design Approach</h2>
-  <ul>
-    <li>Organized content into manageable learning segments.</li>
-    <li>Used visual examples to explain design concepts.</li>
-    <li>Included scenarios to connect concepts to practical decisions.</li>
-    <li>Added interactive quizzes to reinforce understanding.</li>
-    <li>Considered accessibility and different learner needs.</li>
-  </ul>
-</section>
+<!-- FEATURED PROJECT -->
 
 <section>
-  <h2>Tools & Technology</h2>
-  <p>Articulate 360 and Canvas LMS.</p>
-</section>
 
-<section>
-  <h2>Learning Experience</h2>
-  <div class="highlight">
-    <strong>Interactive sample coming soon</strong>
-    <p>
-      A link to the published learning module
-      will be added here.
-    </p>
+  <div class="eyebrow">
+    Featured Course Development Project
   </div>
+
+  <h2>Complete Online Course Design &amp; Development</h2>
+
+  <div class="featured">
+
+    <h3>
+      UNV-101UX: Student Success &amp;
+      Technology Foundations
+    </h3>
+
+    <div class="project-meta">
+      Complete Course Development |
+      Canvas LMS | Online Learning
+    </div>
+
+    <p>
+      I designed and developed this online
+      course to help students build the
+      academic and technology skills needed
+      to succeed in an online learning
+      environment.
+    </p>
+
+    <p>
+      The course addresses important areas
+      such as study strategies, time management,
+      academic goal setting, communication,
+      and foundational technology skills.
+    </p>
+
+    <p>
+      My work included developing the course
+      structure, organizing weekly learning
+      experiences, preparing instructional
+      content, and designing activities
+      that helped students practice
+      essential skills.
+    </p>
+
+    <h3>My Contributions</h3>
+
+    <ul>
+      <li>
+        Designed the complete online course
+        structure and learning experience.
+      </li>
+
+      <li>
+        Developed course content and organized
+        learning activities into weekly modules.
+      </li>
+
+      <li>
+        Created a consistent Canvas layout
+        and navigation structure.
+      </li>
+
+      <li>
+        Incorporated student support
+        information, course expectations,
+        and onboarding resources.
+      </li>
+
+      <li>
+        Integrated instructional materials
+        to support academic and
+        technology readiness.
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="highlight">
+
+    <strong>Instructional Design Focus</strong>
+
+    <p>
+      This project demonstrates my ability
+      to design an entire course, rather
+      than only individual lessons or
+      learning activities.
+    </p>
+
+    <p>
+      It also reflects my experience
+      developing learning experiences
+      that address student readiness,
+      engagement, and success.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- CANVAS COURSE DESIGN -->
+
+<section>
+
+  <h2>Canvas Course Design &amp; Learner Experience</h2>
+
+  <p>
+    I developed and customized Canvas course
+    environments to create consistent,
+    organized learning experiences.
+  </p>
+
+  <p>
+    The course layouts included clear
+    navigation, weekly learning modules,
+    important course information,
+    and links to academic support resources.
+  </p>
+
+  <div class="card-grid">
+
+    <div class="card">
+
+      <div class="card-label">
+        Course Structure
+      </div>
+
+      <h3>Consistent Navigation</h3>
+
+      <p>
+        Designed Canvas course layouts
+        that help students locate weekly
+        content, course materials,
+        assignments, and support resources.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="card-label">
+        Learner Support
+      </div>
+
+      <h3>Student Readiness</h3>
+
+      <p>
+        Incorporated course orientation,
+        instructions, technology information,
+        and academic support resources
+        to help learners get started.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="card-label">
+        Learning Organization
+      </div>
+
+      <h3>Weekly Learning Modules</h3>
+
+      <p>
+        Organized instruction into manageable
+        weekly experiences that connect
+        resources, discussions, activities,
+        and assignments.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="card-label">
+        Course Experience
+      </div>
+
+      <h3>Clear Expectations</h3>
+
+      <p>
+        Created structured learning pathways
+        that make it easier for students
+        to understand what they need
+        to complete each week.
+      </p>
+
+    </div>
+
+  </div>
+
+  <p style="
+    font-size: 13px;
+    color: #74664f;
+  ">
+    Examples include Canvas course structures
+    developed for Student Success &amp;
+    Technology Foundations and Web Development
+    for UX/UI.
+  </p>
+
+</section>
+
+<!-- ASSIGNMENT DESIGN -->
+
+<section>
+
+  <h2>Instructional Content &amp; Assessment Design</h2>
+
+  <p>
+    My course development work also includes
+    creating instructional materials,
+    assignments, and assessments that
+    require learners to apply what
+    they have studied.
+  </p>
+
+  <div class="featured">
+
+    <h3>
+      GWD-130: UX/UI Design Foundations
+    </h3>
+
+    <div class="project-meta">
+      Weekly Instructional Design |
+      Applied Assignments | Canvas LMS
+    </div>
+
+    <p>
+      This course introduces students
+      to user experience and interface
+      design principles through
+      structured learning activities
+      and practical assignments.
+    </p>
+
+    <p>
+      For example, Week 2 focuses on
+      understanding users and the
+      competitive landscape.
+    </p>
+
+    <p>
+      The weekly learning experience
+      includes course resources,
+      instructional materials,
+      discussion activities,
+      knowledge checks, and
+      applied design assignments.
+    </p>
+
+    <h3>Featured Assignment: Journey Map</h3>
+
+    <p>
+      In this assignment, students develop
+      a user journey map based on a target
+      audience and a selected charity website.
+    </p>
+
+    <p>
+      Students examine the experience
+      from the user's perspective,
+      identifying goals, motivations,
+      emotions, pain points, and
+      opportunities for improvement.
+    </p>
+
+    <p>
+      The assignment requires students
+      to connect user research with
+      practical design decisions
+      and communicate their findings
+      through a visual deliverable.
+    </p>
+
+  </div>
+
+  <div class="highlight">
+
+    <strong>Learning Design Approach</strong>
+
+    <p>
+      I use assignments that move beyond
+      recalling information and encourage
+      learners to apply their knowledge,
+      analyze real situations, and
+      develop meaningful work.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- UX PROCESS AND THEORIES -->
+
+<section>
+
+  <h2>Applied Learning &amp; Project-Based Assessments</h2>
+
+  <p>
+    In addition to individual assignments,
+    I developed learning activities that
+    support research, problem-solving,
+    practice, feedback, and revision
+    throughout a course.
+  </p>
+
+  <div class="featured">
+
+    <h3>
+      UXI-205: UX Process &amp; Theories
+    </h3>
+
+    <div class="project-meta">
+      Assignment Development |
+      User-Centered Design | Applied Learning
+    </div>
+
+    <p>
+      The assignment materials include
+      user-centered design analysis,
+      usability testing, personas,
+      and opportunities to improve
+      work based on feedback.
+    </p>
+
+    <p>
+      These activities encourage students
+      to research user needs, identify
+      design problems, evaluate experiences,
+      and recommend improvements.
+    </p>
+
+    <h3>Examples of Learning Activities</h3>
+
+    <ul>
+      <li>
+        Observing and evaluating user
+        experiences in everyday life.
+      </li>
+
+      <li>
+        Conducting user-centered design
+        analysis for a business or service.
+      </li>
+
+      <li>
+        Developing personas based on
+        user needs and behaviors.
+      </li>
+
+      <li>
+        Conducting usability testing
+        and analyzing feedback.
+      </li>
+
+      <li>
+        Revising and improving work
+        based on findings.
+      </li>
+    </ul>
+
+  </div>
+
+</section>
+
+<!-- INSTRUCTIONAL DESIGN PROCESS -->
+
+<section>
+
+  <h2>My Instructional Design Approach</h2>
+
+  <p>
+    Across course and learning
+    development projects, I focus
+    on aligning instructional
+    goals with content, practice,
+    and assessment.
+  </p>
+
+  <div class="process-grid">
+
+    <div class="process-card">
+
+      <div class="process-number">01 / ANALYZE</div>
+
+      <h3>Understand the Need</h3>
+
+      <p>
+        Identify learner needs,
+        learning goals, and the
+        skills students are
+        expected to develop.
+      </p>
+
+    </div>
+
+    <div class="process-card">
+
+      <div class="process-number">02 / DESIGN</div>
+
+      <h3>Plan the Experience</h3>
+
+      <p>
+        Organize objectives,
+        instructional content,
+        learning activities,
+        and assessment methods.
+      </p>
+
+    </div>
+
+    <div class="process-card">
+
+      <div class="process-number">03 / DEVELOP</div>
+
+      <h3>Build the Learning</h3>
+
+      <p>
+        Develop course materials,
+        interactive content,
+        assignments, and
+        online learning experiences.
+      </p>
+
+    </div>
+
+    <div class="process-card">
+
+      <div class="process-number">04 / EVALUATE</div>
+
+      <h3>Review and Improve</h3>
+
+      <p>
+        Review learning experiences,
+        gather feedback, and
+        make improvements to
+        content and course design.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- INTERACTIVE ELEARNING -->
+
+<section>
+
+  <div class="eyebrow">
+    Interactive Learning Samples
+  </div>
+
+  <h2>Articulate eLearning Development</h2>
+
+  <p>
+    I have developed and incorporated
+    interactive learning materials
+    into larger online courses
+    to support understanding,
+    engagement, and practical
+    application.
+  </p>
+
+  <div class="module-grid">
+
+    <!-- INCLUSIVE DESIGN -->
+
+    <div class="module-card">
+
+      <div class="module-top">
+        <h3>
+          Understanding Inclusive
+          Design Fundamentals
+        </h3>
+      </div>
+
+      <div class="module-body">
+
+        <div class="module-tool">
+          Articulate 360 | Canvas
+        </div>
+
+        <p>
+          Introduces inclusive design
+          principles and encourages
+          learners to consider how
+          different users experience
+          digital products and services.
+        </p>
+
+        <p>
+          Includes visual examples,
+          accessibility considerations,
+          learner scenarios, and
+          opportunities to apply
+          design principles.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- GRAPHIC DESIGN BASICS -->
+
+    <div class="module-card">
+
+      <div class="module-top">
+        <h3>
+          Understanding Graphic
+          Design Basics
+        </h3>
+      </div>
+
+      <div class="module-body">
+
+        <div class="module-tool">
+          Articulate 360 | Canvas
+        </div>
+
+        <p>
+          Introduces foundational
+          graphic design concepts
+          including visual hierarchy,
+          balance, contrast,
+          alignment, and typography.
+        </p>
+
+        <p>
+          Uses visual explanations
+          and examples to help
+          learners recognize
+          design principles.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- SCIENCE OF LEARNING -->
+
+    <div class="module-card">
+
+      <div class="module-top">
+        <h3>
+          The Science of
+          Successful Learning
+        </h3>
+      </div>
+
+      <div class="module-body">
+
+        <div class="module-tool">
+          Articulate 360 | Canvas
+        </div>
+
+        <p>
+          Explores learning strategies
+          that can help students
+          improve their study
+          habits and academic success.
+        </p>
+
+        <p>
+          Covers learning myths,
+          effective study methods,
+          and strategies such as
+          spaced practice and
+          retrieval practice.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <p style="
+    font-size: 13px;
+    color: #74664f;
+    margin-top: 25px;
+  ">
+    These descriptions represent learning
+    materials used in online coursework.
+    Interactive demonstrations are not
+    publicly linked on this page.
+  </p>
+
+</section>
+
+<!-- VIDEO DEVELOPMENT -->
+
+<section>
+
+  <div class="eyebrow">
+    AI-Assisted Multimedia Development
+  </div>
+
+  <h2>Instructional Video Development</h2>
+
+  <div class="video-box">
+
+    <h3>
+      Creating Professional Marketing Materials
+    </h3>
+
+    <div class="project-meta">
+      Synthesia | AI-Assisted Video |
+      Self-Paced Learning
+    </div>
+
+    <p>
+      I developed an instructional
+      introduction video using Synthesia
+      for a self-paced course on creating
+      professional marketing materials.
+    </p>
+
+    <p>
+      The video introduced learners
+      to the course and provided
+      a consistent multimedia
+      experience for independent study.
+    </p>
+
+    <p>
+      This project demonstrates
+      my experience using AI-assisted
+      video development tools to
+      create digital learning resources.
+    </p>
+
+    <span class="availability">
+      Video Sample Available Upon Request
+    </span>
+
+  </div>
+
+  <p style="
+    font-size: 13px;
+    color: #74664f;
+    margin-top: 18px;
+  ">
+    Sharing of the video is subject
+    to applicable content permissions.
+  </p>
+
+</section>
+
+<!-- TOOLS AND TECHNOLOGY -->
+
+<section>
+
+  <h2>Tools &amp; Technology</h2>
+
+  <p>
+    My instructional design and
+    course development experience
+    includes a range of learning,
+    content development, and
+    multimedia tools.
+  </p>
+
+  <div class="card-grid">
+
+    <div class="card">
+
+      <h3>Learning Management Systems</h3>
+
+      <p>
+        Canvas, Blackboard,
+        Brightspace (D2L),
+        and Moodle.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>eLearning Development</h3>
+
+      <p>
+        Articulate 360,
+        Storyline, and Rise.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Multimedia &amp; Design</h3>
+
+      <p>
+        Synthesia, Camtasia,
+        Adobe Creative Cloud,
+        and Figma.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Learning Quality &amp; Accessibility</h3>
+
+      <p>
+        Universal Design for Learning,
+        accessibility practices,
+        instructional alignment,
+        and course quality review.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CLOSING -->
+
+<section>
+
+  <h2>Connecting Instructional Design with Program Leadership</h2>
+
+  <div class="highlight">
+
+    <p>
+      My experience combines
+      hands-on instructional design
+      with leadership across
+      curriculum development,
+      academic programs,
+      and learning technology.
+    </p>
+
+    <p>
+      I understand both the details
+      involved in creating an
+      individual learning experience
+      and the larger planning,
+      quality, and implementation
+      needs of an entire program.
+    </p>
+
+  </div>
+
 </section>
 
 <a class="back" href="portfolio.html">
@@ -182,4 +1214,3 @@ footer {
 
 </body>
 </html>
-
