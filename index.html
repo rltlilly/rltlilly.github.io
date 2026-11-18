@@ -126,27 +126,39 @@
       margin-top: 35px;
     }
 
-    .card {
-      background: white;
-      border-radius: 5px;
-      overflow: hidden;
-      box-shadow: 0 4px 18px #0000000c;
-    }
+  .card {
+  display: block;
+  background: white;
+  color: #303530;
+  text-decoration: none;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px #0000000c;
+  transition: transform 0.2s ease;
+}
 
-    .card-top {
-      background: var(--green);
-      color: #e8dfcb;
-      padding: 35px 25px;
-      font-family: Georgia, serif;
-      font-size: 24px;
-      min-height: 135px;
-      display: flex;
-      align-items: center;
-    }
+.card:hover {
+  transform: translateY(-4px);
+}
 
-    .card-body { padding: 25px; }
+.card:visited {
+  color: #303530;
+}
 
-    .card-body h3 { margin-top: 0; }
+.card-top {
+  background: var(--green);
+  color: #e8dfcb;
+  padding: 35px 25px;
+  font-family: Georgia, serif;
+  font-size: 24px;
+  min-height: 135px;
+  display: flex;
+  align-items: center;
+}
+
+.card-body { padding: 25px; }
+
+.card-body h3 { margin-top: 0; }
 
     .tag {
       color: #80643e;
