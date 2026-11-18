@@ -1,1 +1,582 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Expertise | Rosetta Lilly</title>
+
+<meta name="description"
+content="Explore Rosetta Lilly's expertise in program
+leadership, program development and launch,
+learning strategy, curriculum development,
+team leadership, and learning technology.">
+
+<style>
+:root {
+  --green: #243b32;
+  --cream: #f8f6f0;
+  --gold: #bc9a66;
+  --text: #303530;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+/* NAVIGATION */
+
+header {
+  background: var(--green);
+  padding: 22px 8%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  color: white;
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.links a:hover,
+.links a.active {
+  color: #d6b984;
+}
+
+/* HERO */
+
+.hero {
+  background: var(--green);
+  color: white;
+  padding: 70px 8% 85px;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: clamp(40px, 5vw, 58px);
+  margin: 15px 0 20px;
+}
+
+h2 {
+  font-size: 31px;
+  margin: 0 0 18px;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 0 0 12px;
+}
+
+.hero p {
+  max-width: 760px;
+  font-size: 17px;
+  color: #e5e9e4;
+}
+
+/* CONTENT */
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 65px 28px 85px;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.section-heading p {
+  max-width: 780px;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.expertise-card {
+  background: white;
+  padding: 30px;
+  border-radius: 6px;
+  border-top: 4px solid var(--gold);
+  box-shadow: 0 4px 18px #0000000c;
+}
+
+.expertise-card h3 {
+  color: var(--green);
+}
+
+.expertise-card p {
+  margin: 0 0 15px;
+  font-size: 15px;
+}
+
+.expertise-card ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.expertise-card li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* LEADERSHIP METRICS */
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 40px 0 70px;
+}
+
+.metric {
+  background: #eeeae0;
+  padding: 28px 18px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.metric-number {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 44px;
+  color: var(--green);
+  line-height: 1.2;
+}
+
+.metric-label {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* TECHNOLOGY */
+
+.technology-section {
+  margin-top: 75px;
+  padding-top: 55px;
+  border-top: 1px solid #ddd8cd;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.tech-group {
+  background: white;
+  border-radius: 5px;
+  padding: 25px;
+}
+
+.tech-group h3 {
+  font-size: 21px;
+  color: var(--green);
+}
+
+.tech-group p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+/* CLOSING */
+
+.closing {
+  background: #eeece5;
+  text-align: center;
+  padding: 60px 8%;
+}
+
+.closing-inner {
+  max-width: 750px;
+  margin: auto;
+}
+
+.button {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 13px 26px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: #365746;
+}
+
+footer {
+  background: var(--green);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+  .expertise-grid,
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .links {
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 55px 8%;
+  }
+
+  .container {
+    padding: 45px 8%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+<nav>
+  <a class="logo" href="index.html">Rosetta Lilly</a>
+
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="expertise.html" class="active"
+       aria-current="page">Expertise</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+</header>
+
+<!-- HERO -->
+
+<div class="hero">
+  <div class="hero-inner">
+
+    <div class="eyebrow">
+      Leadership | Program Strategy | Learning Innovation
+    </div>
+
+    <h1>Expertise &amp; Capabilities</h1>
+
+    <p>
+      I bring together program leadership,
+      strategic planning, team development,
+      curriculum expertise, and learning technology
+      to build effective programs, improve processes,
+      and support organizational goals.
+    </p>
+
+  </div>
+</div>
+
+<main class="container">
+
+  <!-- LEADERSHIP METRICS -->
+
+  <div class="eyebrow">Leadership Experience</div>
+
+  <h2>Experience That Delivers Results</h2>
+
+  <div class="metrics">
+
+    <div class="metric">
+      <span class="metric-number">4</span>
+      <span class="metric-label">
+        Online Programs Developed &amp; Launched
+      </span>
+    </div>
+
+    <div class="metric">
+      <span class="metric-number">17</span>
+      <span class="metric-label">
+        Faculty Supervised
+      </span>
+    </div>
+
+    <div class="metric">
+      <span class="metric-number">150</span>
+      <span class="metric-label">
+        Students Under Program Oversight at Peak
+      </span>
+    </div>
+
+  </div>
+
+  <!-- CORE EXPERTISE -->
+
+  <div class="section-heading">
+    <div class="eyebrow">Core Capabilities</div>
+
+    <h2>Areas of Expertise</h2>
+
+    <p>
+      My experience spans the strategic,
+      operational, and instructional aspects
+      of program leadership and development.
+    </p>
+  </div>
+
+  <div class="expertise-grid">
+
+    <!-- PROGRAM DEVELOPMENT -->
+
+    <div class="expertise-card">
+      <h3>Program Development &amp; Launch</h3>
+
+      <p>
+        Leading programs from initial concept
+        through implementation, launch,
+        ongoing management, and improvement.
+      </p>
+
+      <ul>
+        <li>Program strategy and planning</li>
+        <li>End-to-end program development</li>
+        <li>Launch planning and implementation</li>
+        <li>Program operations and evaluation</li>
+        <li>Continuous program improvement</li>
+      </ul>
+    </div>
+
+    <!-- STRATEGIC MANAGEMENT -->
+
+    <div class="expertise-card">
+      <h3>Strategic Planning &amp; Program Management</h3>
+
+      <p>
+        Connecting organizational priorities
+        with practical plans, coordinated
+        implementation, and measurable outcomes.
+      </p>
+
+      <ul>
+        <li>Strategic initiative leadership</li>
+        <li>Cross-functional project coordination</li>
+        <li>Operational planning and execution</li>
+        <li>Stakeholder communication</li>
+        <li>Process improvement</li>
+      </ul>
+    </div>
+
+    <!-- TEAM LEADERSHIP -->
+
+    <div class="expertise-card">
+      <h3>Team Leadership &amp; Development</h3>
+
+      <p>
+        Building, supporting, and guiding
+        teams to deliver consistent
+        performance and quality.
+      </p>
+
+      <ul>
+        <li>Faculty recruitment and onboarding</li>
+        <li>Team supervision and performance feedback</li>
+        <li>Professional development and coaching</li>
+        <li>Collaboration across departments</li>
+        <li>Change management and implementation</li>
+      </ul>
+    </div>
+
+    <!-- CURRICULUM -->
+
+    <div class="expertise-card">
+      <h3>Curriculum &amp; Learning Strategy</h3>
+
+      <p>
+        Developing learning programs that
+        align instructional outcomes with
+        industry expectations and practical
+        application.
+      </p>
+
+      <ul>
+        <li>Curriculum architecture and sequencing</li>
+        <li>Program learning outcomes assessment</li>
+        <li>Programmatic reviews</li>
+        <li>Project-based learning</li>
+        <li>Quality and accessibility standards</li>
+      </ul>
+    </div>
+
+    <!-- ANALYTICS -->
+
+    <div class="expertise-card">
+      <h3>Performance Analytics &amp; Improvement</h3>
+
+      <p>
+        Using data and stakeholder feedback
+        to guide decisions, identify challenges,
+        and improve program outcomes.
+      </p>
+
+      <ul>
+        <li>Learning analytics and reporting</li>
+        <li>Performance monitoring</li>
+        <li>Retention and intervention strategies</li>
+        <li>Data-informed decision-making</li>
+        <li>Program evaluation</li>
+      </ul>
+    </div>
+
+    <!-- INSTRUCTIONAL DESIGN -->
+
+    <div class="expertise-card">
+      <h3>Instructional Design &amp; Learning Technology</h3>
+
+      <p>
+        Combining hands-on instructional
+        design experience with learning
+        technology to develop engaging,
+        accessible, and effective learning.
+      </p>
+
+      <ul>
+        <li>Instructional design and course development</li>
+        <li>Digital learning experiences</li>
+        <li>LMS implementation and administration</li>
+        <li>Interactive learning content</li>
+        <li>Universal Design for Learning</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- TECHNOLOGY -->
+
+  <section class="technology-section">
+
+    <div class="eyebrow">Tools &amp; Technology</div>
+
+    <h2>Technology &amp; Platforms</h2>
+
+    <p>
+      I use technology to support program
+      operations, learning development,
+      collaboration, and data-informed decisions.
+    </p>
+
+    <div class="tech-grid">
+
+      <div class="tech-group">
+        <h3>Learning Management Systems</h3>
+        <p>
+          Canvas, Blackboard, Brightspace (D2L),
+          Moodle
+        </p>
+      </div>
+
+      <div class="tech-group">
+        <h3>Learning &amp; Content Development</h3>
+        <p>
+          Articulate 360, Storyline, Rise,
+          Camtasia, Adobe Creative Cloud,
+          Figma
+        </p>
+      </div>
+
+      <div class="tech-group">
+        <h3>Analytics &amp; Collaboration</h3>
+        <p>
+          Power BI, Salesforce,
+          Microsoft Teams, Zoom
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<!-- CLOSING -->
+
+<section class="closing">
+  <div class="closing-inner">
+
+    <h2>Connecting Leadership with Learning Innovation</h2>
+
+    <p>
+      My background combines strategic
+      program management, curriculum leadership,
+      team development, and instructional
+      technology to support meaningful
+      organizational outcomes.
+    </p>
+
+    <a class="button" href="portfolio.html">
+      Explore My Work
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Rosetta Lilly | Professional Portfolio
+</footer>
+
+</body>
+</html>
+
