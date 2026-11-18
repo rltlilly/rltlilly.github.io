@@ -1,1 +1,188 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Rosetta Lilly</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #f8f6f0;
+      color: #303530;
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #243b32;
+      color: white;
+      padding: 22px 8%;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      color: white;
+      font-size: 23px;
+      text-decoration: none;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .links a:hover, .links a.active {
+      color: #d6b984;
+    }
+
+    main {
+      max-width: 850px;
+      margin: auto;
+      padding: 85px 8% 110px;
+      min-height: 70vh;
+    }
+
+    .eyebrow {
+      color: #947344;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(40px, 6vw, 55px);
+      font-weight: normal;
+      margin: 15px 0 25px;
+    }
+
+    .intro {
+      font-size: 17px;
+      max-width: 650px;
+      margin-bottom: 45px;
+    }
+
+    .contact-item {
+      padding: 24px 0;
+      border-bottom: 1px solid #ddd8cd;
+    }
+
+    .contact-item h2 {
+      font-family: Georgia, serif;
+      font-size: 23px;
+      font-weight: normal;
+      margin: 0 0 6px;
+    }
+
+    .contact-item a {
+      color: #40654f;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .button {
+      display: inline-block;
+      background: #243b32;
+      color: white !important;
+      padding: 12px 22px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #243b32;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      main { padding: 55px 8%; }
+      .links { gap: 12px; }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <nav>
+    <a class="logo" href="index.html">Rosetta Lilly</a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="expertise.html">Expertise</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Get in Touch</div>
+  <h1>Let Us Connect</h1>
+
+  <p class="intro">
+    I welcome opportunities to connect about program
+    management, learning and development, instructional
+    design, and curriculum leadership.
+  </p>
+
+  <div class="contact-item">
+    <h2>Email</h2>
+    <p>Feel free to reach out to discuss opportunities
+    or professional collaborations.</p>
+    <a href="mailto:rosettalilly@comcast.net">
+      Send Me an Email
+    </a>
+  </div>
+
+  <div class="contact-item">
+    <h2>LinkedIn</h2>
+    <p>Connect with me and learn more about my
+    professional experience.</p>
+    <a href="https://www.linkedin.com/in/rosetta-lilly-71825540/" target="_blank"
+       rel="noopener noreferrer">
+      View My LinkedIn Profile
+    </a>
+  </div>
+
+  <div class="contact-item">
+    <h2>Résumé</h2>
+    <p>Explore my professional background,
+    leadership experience, and qualifications.</p>
+    <a class="button" href="resume.pdf" download>
+      Download My Résumé
+    </a>
+  </div>
+</main>
+
+<footer>
+  &copy; 2026 Rosetta Lilly | Professional Portfolio
+</footer>
+</body>
+</html>
+
