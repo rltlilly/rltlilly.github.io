@@ -4,7 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Online Program Development | Rosetta Lilly</title>
+
+<title>Program Development & Launch | Rosetta Lilly</title>
+
+<meta name="description"
+content="Explore Rosetta Lilly's leadership in developing,
+launching, managing, and improving four online
+degree and certificate programs.">
+
 <style>
 :root {
   --green: #243b32;
@@ -12,14 +19,25 @@
   --gold: #bc9a66;
   --text: #303530;
 }
-* { box-sizing: border-box; }
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: var(--cream);
   color: var(--text);
   font: 16px/1.75 "Segoe UI", Arial, sans-serif;
 }
-header { background: var(--green); padding: 22px 8%; }
+
+/* NAVIGATION */
+
+header {
+  background: var(--green);
+  padding: 22px 8%;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -27,24 +45,43 @@ nav {
   flex-wrap: wrap;
   gap: 15px;
 }
+
 .logo {
   color: white;
   text-decoration: none;
   font: 23px Georgia, serif;
 }
-.links { display: flex; flex-wrap: wrap; gap: 20px; }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .links a {
   color: white;
   font-size: 14px;
   text-decoration: none;
 }
-.links a:hover, .links a.active { color: #d6b984; }
+
+.links a:hover,
+.links a.active {
+  color: #d6b984;
+}
+
+/* HERO */
+
 .hero {
   background: var(--green);
   color: white;
-  padding: 65px 8%;
+  padding: 70px 8% 85px;
 }
-.hero-inner, main { max-width: 1000px; margin: auto; }
+
+.hero-inner {
+  max-width: 1050px;
+  margin: auto;
+}
+
 .eyebrow {
   color: var(--gold);
   font-size: 12px;
@@ -52,50 +89,222 @@ nav {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-h1, h2 {
+
+h1, h2, h3 {
   font-family: Georgia, serif;
   font-weight: normal;
   line-height: 1.3;
 }
-h1 { font-size: clamp(36px, 5vw, 54px); }
-h2 { font-size: 29px; margin: 0 0 12px; }
-.hero p { color: #e4e9e3; max-width: 720px; }
-main { padding: 65px 8% 90px; }
+
+h1 {
+  font-size: clamp(38px, 5vw, 56px);
+  margin: 15px 0 20px;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 0 0 18px;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 0 0 12px;
+}
+
+.hero p {
+  color: #e4e9e3;
+  max-width: 800px;
+  font-size: 18px;
+}
+
+/* MAIN CONTENT */
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 65px 8% 90px;
+}
+
 section {
-  padding: 20px 0 30px;
+  padding: 25px 0 45px;
   border-bottom: 1px solid #ddd8cd;
 }
-section:last-of-type { border: none; }
-ul { padding-left: 23px; }
-li { margin-bottom: 8px; }
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+section p {
+  max-width: 900px;
+}
+
+/* PROGRAM CARDS */
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.program-card {
+  background: white;
+  border-left: 4px solid var(--gold);
+  padding: 25px;
+  border-radius: 4px;
+  box-shadow: 0 3px 14px #0000000b;
+}
+
+.program-card h3 {
+  color: var(--green);
+  font-size: 21px;
+  margin-bottom: 6px;
+}
+
+.program-card p {
+  margin: 0;
+  color: #74664f;
+  font-size: 14px;
+}
+
+/* PROGRAM LIFECYCLE */
+
+.lifecycle {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.phase {
+  background: white;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0 3px 14px #0000000b;
+}
+
+.phase-number {
+  font-size: 13px;
+  font-weight: bold;
+  color: #947344;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.phase h3 {
+  font-size: 21px;
+}
+
+.phase p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+/* HIGHLIGHTS */
+
 .highlight {
   background: #eeeae0;
   border-left: 4px solid var(--gold);
-  padding: 20px 25px;
+  padding: 25px 30px;
   margin: 25px 0;
 }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.stat {
+  background: white;
+  padding: 25px 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.stat-number {
+  display: block;
+  color: var(--green);
+  font-family: Georgia, serif;
+  font-size: 44px;
+  line-height: 1.2;
+}
+
+.stat-label {
+  display: block;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+/* LISTS */
+
+ul {
+  padding-left: 23px;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+/* LINKS */
+
 .back {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 35px;
   color: #37664d;
   font-weight: bold;
+  text-decoration: none;
 }
+
+.back:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+
 footer {
   background: var(--green);
   color: white;
   text-align: center;
   padding: 30px;
 }
-@media(max-width:650px) {
-  .links { gap: 12px; }
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .program-grid,
+  .lifecycle {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .links {
+    gap: 12px;
+  }
+
+  main {
+    padding: 45px 8%;
+  }
+
+  .hero {
+    padding: 55px 8%;
+  }
 }
 </style>
 </head>
+
 <body>
+
+<!-- HEADER -->
 
 <header>
 <nav>
   <a class="logo" href="index.html">Rosetta Lilly</a>
+
   <div class="links">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -106,82 +315,430 @@ footer {
 </nav>
 </header>
 
+<!-- HERO -->
+
 <div class="hero">
   <div class="hero-inner">
-    <div class="eyebrow">Curriculum & Program Development</div>
-    <h1>Online Program Development & Redesign</h1>
+
+    <div class="eyebrow">
+      Program Leadership | Strategy | Development & Launch
+    </div>
+
+    <h1>Building &amp; Launching Four Online Programs</h1>
+
     <p>
-      Leading the development, launch, and improvement
-      of online programs aligned with learner needs
-      and industry expectations.
+      Leading programs from initial concept and
+      strategic planning through curriculum development,
+      implementation, launch, and ongoing operations.
     </p>
+
   </div>
 </div>
 
 <main>
 
+<!-- PROJECT OVERVIEW -->
+
 <section>
+
   <h2>Project Overview</h2>
+
   <p>
-    I led the development, launch, and ongoing
-    management of three online programs in UX/UI
-    Design, Graphic Design, and Web Design.
+    I led the end-to-end development and launch
+    of four online degree and certificate programs
+    in UX/UI Design and Graphic Design. My
+    responsibilities spanned the full program
+    lifecycle, from early planning and curriculum
+    architecture to course development, faculty
+    recruitment, implementation, launch, and
+    ongoing program management.
   </p>
+
   <p>
-    My work covered the program lifecycle, including
-    curriculum planning, course development,
-    implementation, program reviews, and
-    continuous improvement.
+    I coordinated cross-functional teams,
+    established instructional and assessment
+    standards, and developed processes to support
+    consistent program delivery. Following launch,
+    I continued to oversee program operations,
+    evaluate performance, and lead improvements
+    informed by data, faculty feedback, and
+    industry expectations.
   </p>
+
 </section>
 
+<!-- FOUR PROGRAMS -->
+
 <section>
-  <h2>The Challenge</h2>
+
+  <h2>Programs Developed &amp; Launched</h2>
+
   <p>
-    Developing online programs required more than
-    creating courses. The curriculum needed to
-    support clear learning outcomes, practical
-    application, consistent instruction, and
-    preparation for industry expectations.
+    I directed the development and implementation
+    of four distinct online programs across
+    certificate and associate degree levels.
   </p>
-</section>
 
-<section>
-  <h2>My Role & Approach</h2>
-  <ul>
-    <li>Led curriculum development and course sequencing.</li>
-    <li>Aligned assessments with program learning outcomes.</li>
-    <li>Directed curriculum reviews and redesign initiatives.</li>
-    <li>Worked with faculty and instructional support teams.</li>
-    <li>Used Program Advisory Committee feedback to guide improvements.</li>
-    <li>Supported consistent course quality and accessibility.</li>
-    <li>Oversaw implementation and ongoing program operations.</li>
-  </ul>
-</section>
+  <div class="program-grid">
 
-<section>
-  <h2>Results & Impact</h2>
-  <div class="highlight">
-    <p>
-      Led the launch and management of three online
-      programs, including initial launches completed
-      within approximately five months.
-    </p>
+    <div class="program-card">
+      <h3>UX/UI Design</h3>
+      <p>Certificate Program</p>
+    </div>
+
+    <div class="program-card">
+      <h3>UX/UI Design</h3>
+      <p>Associate Degree Program</p>
+    </div>
+
+    <div class="program-card">
+      <h3>Graphic Design</h3>
+      <p>Certificate Program</p>
+    </div>
+
+    <div class="program-card">
+      <h3>Graphic Design</h3>
+      <p>Associate Degree Program</p>
+    </div>
+
   </div>
-  <p>
-    Curriculum improvements emphasized project-based
-    learning, authentic assessments, and portfolio
-    development to strengthen career readiness.
-  </p>
+
 </section>
 
+<!-- CHALLENGE -->
+
 <section>
-  <h2>Supporting Materials</h2>
+
+  <h2>The Challenge</h2>
+
   <p>
-    Relevant curriculum maps, course examples,
-    assessment plans, or screenshots may be added
-    here when appropriate for public sharing.
+    Building new academic programs required
+    coordinating multiple moving parts while
+    maintaining academic quality and meeting
+    implementation goals.
   </p>
+
+  <p>
+    Each program needed a clear curriculum
+    structure, aligned learning outcomes,
+    meaningful assessments, qualified faculty,
+    and consistent online course experiences.
+    At the same time, the programs needed
+    to reflect current industry expectations
+    and prepare students with practical,
+    career-relevant skills.
+  </p>
+
+  <p>
+    My responsibility was to bring these
+    components together, manage development
+    priorities, coordinate the people involved,
+    and move each program successfully
+    from planning into operation.
+  </p>
+
+</section>
+
+<!-- ROLE -->
+
+<section>
+
+  <h2>My Leadership Role</h2>
+
+  <p>
+    As Program Director, I was responsible for
+    the development, implementation, and
+    ongoing management of the programs.
+    My role combined strategic leadership
+    with hands-on knowledge of curriculum
+    development and learning technology.
+  </p>
+
+  <ul>
+
+    <li>
+      <strong>Strategic Planning:</strong>
+      Led program planning, established
+      development priorities, and coordinated
+      implementation activities.
+    </li>
+
+    <li>
+      <strong>Curriculum Leadership:</strong>
+      Directed program structures, course
+      sequencing, learning outcomes, and
+      assessment alignment.
+    </li>
+
+    <li>
+      <strong>Faculty Leadership:</strong>
+      Recruited, onboarded, supervised,
+      and supported faculty responsible
+      for course delivery and student learning.
+    </li>
+
+    <li>
+      <strong>Cross-Functional Collaboration:</strong>
+      Worked with academic leadership,
+      instructional design, technology,
+      and student support teams to coordinate
+      development and launch activities.
+    </li>
+
+    <li>
+      <strong>Launch Management:</strong>
+      Coordinated course readiness,
+      faculty assignments, scheduling,
+      and operational requirements
+      for implementation.
+    </li>
+
+    <li>
+      <strong>Program Operations:</strong>
+      Oversaw ongoing delivery, faculty
+      performance, student progress,
+      and program quality.
+    </li>
+
+    <li>
+      <strong>Continuous Improvement:</strong>
+      Used learning analytics, program
+      reviews, assessment findings,
+      and industry feedback to guide
+      curriculum and process improvements.
+    </li>
+
+  </ul>
+
+</section>
+
+<!-- DEVELOPMENT LIFECYCLE -->
+
+<section>
+
+  <h2>From Concept to Launch</h2>
+
+  <p>
+    My approach covered the complete program
+    development lifecycle, connecting strategic
+    planning with curriculum development,
+    implementation, and continuous improvement.
+  </p>
+
+  <div class="lifecycle">
+
+    <div class="phase">
+      <div class="phase-number">01 / PLAN</div>
+
+      <h3>Program Strategy &amp; Planning</h3>
+
+      <p>
+        Established program goals, reviewed
+        requirements, identified development
+        priorities, and coordinated planning
+        activities to move each program forward.
+      </p>
+    </div>
+
+    <div class="phase">
+      <div class="phase-number">02 / DEVELOP</div>
+
+      <h3>Curriculum Architecture</h3>
+
+      <p>
+        Led curriculum mapping, course sequencing,
+        learning outcome development, assessment
+        alignment, and course development to
+        create cohesive learning experiences.
+      </p>
+    </div>
+
+    <div class="phase">
+      <div class="phase-number">03 / LEAD</div>
+
+      <h3>Team &amp; Resource Coordination</h3>
+
+      <p>
+        Recruited and supported faculty,
+        collaborated with instructional
+        teams, and coordinated resources
+        needed for successful implementation.
+      </p>
+    </div>
+
+    <div class="phase">
+      <div class="phase-number">04 / LAUNCH</div>
+
+      <h3>Implementation &amp; Readiness</h3>
+
+      <p>
+        Oversaw course readiness,
+        faculty assignments, scheduling,
+        LMS preparation, and operational
+        coordination for program launch.
+      </p>
+    </div>
+
+    <div class="phase">
+      <div class="phase-number">05 / MANAGE</div>
+
+      <h3>Program Operations</h3>
+
+      <p>
+        Managed ongoing program delivery,
+        monitored student progress,
+        supported faculty, and addressed
+        operational challenges.
+      </p>
+    </div>
+
+    <div class="phase">
+      <div class="phase-number">06 / IMPROVE</div>
+
+      <h3>Evaluation &amp; Continuous Improvement</h3>
+
+      <p>
+        Conducted program reviews,
+        analyzed performance data,
+        gathered stakeholder feedback,
+        and directed curriculum
+        and process improvements.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROGRAM QUALITY -->
+
+<section>
+
+  <h2>Program Quality &amp; Continuous Improvement</h2>
+
+  <p>
+    My responsibilities continued beyond
+    launching the programs. I led ongoing
+    reviews and improvements to maintain
+    academic quality, instructional
+    consistency, and alignment with
+    industry expectations.
+  </p>
+
+  <ul>
+
+    <li>
+      Developed and reviewed Program Learning
+      Outcomes Assessment Plans (PLOAPs),
+      including measures, benchmarks,
+      and improvement actions.
+    </li>
+
+    <li>
+      Led programmatic reviews to evaluate
+      curriculum effectiveness and
+      identify opportunities for improvement.
+    </li>
+
+    <li>
+      Worked with the Program Advisory Committee
+      to incorporate employer and industry feedback.
+    </li>
+
+    <li>
+      Directed curriculum improvements emphasizing
+      project-based learning, authentic assessments,
+      and professional portfolio development.
+    </li>
+
+    <li>
+      Used Canvas analytics and Power BI
+      to monitor performance and support
+      data-informed decisions.
+    </li>
+
+    <li>
+      Supported faculty development,
+      instructional consistency,
+      accessibility, and course quality.
+    </li>
+
+  </ul>
+
+</section>
+
+<!-- RESULTS -->
+
+<section>
+
+  <h2>Results &amp; Impact</h2>
+
+  <p>
+    The work resulted in the development
+    and launch of four online programs,
+    supported by curriculum structures,
+    qualified faculty, instructional
+    standards, and ongoing operational processes.
+  </p>
+
+  <div class="stats">
+
+    <div class="stat">
+      <span class="stat-number">4</span>
+      <span class="stat-label">
+        Online Programs Developed &amp; Launched
+      </span>
+    </div>
+
+    <div class="stat">
+      <span class="stat-number">17+</span>
+      <span class="stat-label">
+        Faculty Supervised
+      </span>
+    </div>
+
+    <div class="stat">
+      <span class="stat-number">130</span>
+      <span class="stat-label">
+        Students Under Program Oversight
+      </span>
+    </div>
+
+  </div>
+
+  <div class="highlight">
+
+    <strong>Leadership Impact</strong>
+
+    <p>
+      Directed program development and launch
+      activities while overseeing faculty,
+      curriculum quality, and ongoing operations.
+      Continued to lead curriculum redesigns,
+      program reviews, and improvements
+      focused on career readiness,
+      instructional quality, and student success.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- SUPPORTING MATERIALS -->
+
+<section>
+
+  <h2>Supporting Work &amp; Examples</h2>
+
+  <p>
+    This case study reflects my experience
+    leading program development and launch
+    initiatives. Selected curriculum maps,
+    assessment examples, program planning
+    materials, and course samples can
+    further demonstrate the work involved.
+  </p>
+
 </section>
 
 <a class="back" href="portfolio.html">
@@ -196,4 +753,3 @@ footer {
 
 </body>
 </html>
-
