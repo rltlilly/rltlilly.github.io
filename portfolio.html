@@ -2,545 +2,1116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Portfolio | Rosetta Lilly</title>
+<title>Portfolio | Rosetta Lilly</title>
 
-  <meta name="description"
-        content="Explore program leadership, curriculum development,
-        strategic initiatives, and instructional design
-        projects led by Rosetta Lilly.">
+<meta name="description"
+content="Explore Rosetta Lilly's work in program leadership,
+online program development, strategic initiatives,
+student success, curriculum design, and eLearning.">
 
-  <style>
-    :root {
-      --green: #243b32;
-      --cream: #f8f6f0;
-      --gold: #bc9a66;
-      --text: #303530;
-    }
+<style>
+:root {
+  --green: #243b32;
+  --green-light: #365748;
+  --cream: #f8f6f0;
+  --gold: #bc9a66;
+  --text: #303530;
+  --muted: #626b62;
+  --border: #dedbd2;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--text);
-      font-family: "Segoe UI", Arial, sans-serif;
-      line-height: 1.7;
-    }
+html { scroll-behavior: smooth; }
 
-    /* Navigation */
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+}
 
-    header {
-      background: var(--green);
-      padding: 22px 8%;
-    }
+a { color: inherit; }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
+a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 5px;
+}
 
-    .logo {
-      font-family: Georgia, serif;
-      font-size: 23px;
-      color: white;
-      text-decoration: none;
-    }
+.container {
+  width: min(1160px, 88%);
+  margin: 0 auto;
+}
 
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+.eyebrow {
+  color: #866940;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+}
 
-    .links a {
-      color: white;
-      font-size: 14px;
-      text-decoration: none;
-    }
+h1, h2, h3 {
+  margin-top: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  line-height: 1.15;
+}
 
-    .links a:hover,
-    .links a.active {
-      color: #d6b984;
-    }
+/* NAVIGATION */
 
-    /* Hero */
+header {
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+}
 
-    .hero {
-      background: var(--green);
-      color: white;
-      padding: 70px 8% 85px;
-    }
+nav {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
 
-    .hero-inner {
-      max-width: 1100px;
-      margin: auto;
-    }
+.logo {
+  color: var(--green);
+  font-family: Georgia, serif;
+  font-size: 25px;
+  letter-spacing: -0.7px;
+  text-decoration: none;
+}
 
-    .eyebrow {
-      color: var(--gold);
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
 
-    h1, h2, h3 {
-      font-family: Georgia, serif;
-      font-weight: normal;
-      line-height: 1.3;
-    }
+.nav-links a {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
 
-    h1 {
-      font-size: clamp(40px, 5vw, 58px);
-      margin: 15px 0 20px;
-    }
+.nav-links a:hover,
+.nav-links a.active {
+  color: #8f6d39;
+}
 
-    h2 {
-      font-size: 32px;
-      margin: 0 0 12px;
-    }
+.nav-links .nav-contact {
+  background: var(--green);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
 
-    .hero p {
-      max-width: 760px;
-      color: #e5e9e4;
-      font-size: 17px;
-    }
+.nav-links .nav-contact:hover {
+  background: var(--green-light);
+  color: white;
+}
 
-    /* Main Content */
+/* HERO */
 
-    .container {
-      max-width: 1160px;
-      margin: auto;
-      padding: 65px 28px 85px;
-    }
+.hero {
+  padding: 90px 0 95px;
+}
 
-    .category {
-      margin-bottom: 70px;
-    }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 70px;
+  align-items: end;
+}
 
-    .category:last-child {
-      margin-bottom: 0;
-    }
+.hero h1 {
+  color: var(--green);
+  font-size: clamp(45px, 5.5vw, 76px);
+  letter-spacing: -2px;
+  margin: 22px 0 0;
+}
 
-    .category-intro {
-      max-width: 780px;
-      margin-bottom: 28px;
-      font-size: 16px;
-    }
+.hero h1 em {
+  display: block;
+  color: #897046;
+  font-weight: normal;
+}
 
-    /* Project Cards */
+.hero-description {
+  max-width: 430px;
+  color: #535c55;
+  font-size: 17px;
+  line-height: 1.9;
+  margin: 0 0 8px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns:
-        repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
+/* PORTFOLIO CATEGORY INTRO */
 
-    .card {
-      display: block;
-      background: white;
-      color: var(--text);
-      text-decoration: none;
-      border-radius: 6px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px #00000012;
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-    }
+.category-intro {
+  margin: 0 0 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+}
 
-    .card:visited {
-      color: var(--text);
-    }
+.category-intro h2 {
+  font-size: clamp(35px, 4vw, 52px);
+  color: var(--green);
+  letter-spacing: -1px;
+  margin: 14px 0 0;
+}
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 9px 26px #0000001c;
-    }
+.category-intro p {
+  max-width: 440px;
+  color: #58625a;
+  font-size: 15px;
+  line-height: 1.85;
+  margin: 0 0 4px;
+}
 
-    .card:focus-visible {
-      outline: 3px solid var(--gold);
-      outline-offset: 4px;
-    }
+/* FEATURED PROGRAM */
 
-    .card-top {
-      background: var(--green);
-      color: #e8dec9;
-      min-height: 140px;
-      display: flex;
-      align-items: center;
-      padding: 30px;
-      font-family: Georgia, serif;
-      font-size: 25px;
-      line-height: 1.4;
-    }
+.featured-section {
+  padding: 20px 0 100px;
+}
 
-    .card-body {
-      padding: 27px;
-    }
+.featured-card {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease;
+}
 
-    .tag {
-      color: #82643d;
-      font-size: 12px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+.featured-card:hover {
+  box-shadow: 0 18px 40px rgba(36,59,50,0.2);
+}
 
-    .card h3 {
-      font-size: 23px;
-      margin: 12px 0;
-    }
+.featured-content {
+  padding: 55px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-    .card p {
-      font-size: 15px;
-      line-height: 1.7;
-      margin-bottom: 22px;
-    }
+.featured-content .eyebrow {
+  color: #d6b984;
+}
 
-    .card-link {
-      color: #37664d;
-      font-weight: bold;
-      font-size: 14px;
-    }
+.featured-content h3 {
+  color: white;
+  font-size: clamp(34px, 3.6vw, 49px);
+  letter-spacing: -1px;
+  margin: 28px 0 20px;
+}
 
-    /* Closing Section */
+.featured-content p {
+  color: #dce5de;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0 0 30px;
+}
 
-    .closing {
-      background: #eeece5;
-      padding: 55px 8%;
-      text-align: center;
-    }
+.project-link {
+  display: inline-block;
+  margin-top: auto;
+  font-size: 13px;
+  font-weight: 700;
+  padding-top: 15px;
+}
 
-    .closing-inner {
-      max-width: 750px;
-      margin: auto;
-    }
+.featured-content .project-link {
+  color: #e1c89d;
+}
 
-    .closing h2 {
-      font-size: 30px;
-    }
+.featured-visual {
+  background: #344d40;
+  min-height: 440px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 25px;
-      background: var(--green);
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: 600;
-    }
+.featured-visual::after {
+  content: "04";
+  position: absolute;
+  right: -15px;
+  bottom: 35px;
+  font-family: Georgia, serif;
+  font-size: clamp(180px, 22vw, 330px);
+  line-height: 1;
+  color: rgba(255,255,255,0.075);
+  pointer-events: none;
+}
 
-    .button:hover {
-      background: #365746;
-    }
+.visual-top {
+  position: relative;
+  z-index: 1;
+  color: #d6b984;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
 
-    /* Footer */
+.visual-bottom {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  line-height: 1.25;
+  color: #e8dfcb;
+}
 
-    footer {
-      background: var(--green);
-      color: white;
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-    }
+/* LEADERSHIP SECTION */
 
-    /* Mobile */
+.leadership-section {
+  background: #efede6;
+  padding: 100px 0;
+}
 
-    @media (max-width: 650px) {
-      .hero {
-        padding: 55px 8%;
-      }
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
 
-      .container {
-        padding: 45px 8%;
-      }
+.project-card {
+  background: white;
+  border: 1px solid #e2dfd6;
+  color: var(--text);
+  text-decoration: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
 
-      .category {
-        margin-bottom: 55px;
-      }
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(36,59,50,0.12);
+}
 
-      .links {
-        gap: 12px;
-      }
+.project-art {
+  min-height: 240px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
 
-      .grid {
-        grid-template-columns: 1fr;
-      }
+.project-art .art-label {
+  position: relative;
+  z-index: 1;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  color: #755a36;
+}
 
-      .card-top {
-        min-height: 110px;
-      }
-    }
-  </style>
+.project-art .art-title {
+  position: relative;
+  z-index: 1;
+  max-width: 340px;
+  color: var(--green);
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 3vw, 39px);
+  line-height: 1.2;
+}
+
+.art-community {
+  background: #e2dacb;
+}
+
+.art-community::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: 35px;
+  width: 210px;
+  height: 210px;
+  border: 48px solid rgba(36,59,50,0.1);
+  border-radius: 50%;
+}
+
+.art-success {
+  background: #dfe7df;
+}
+
+.art-success::after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  right: -25px;
+  bottom: -50px;
+  border: 1px solid #8ea394;
+  transform: rotate(45deg);
+}
+
+.project-content {
+  flex: 1;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-category {
+  color: #866940;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.project-content h3 {
+  color: var(--green);
+  font-size: 29px;
+  margin-bottom: 15px;
+}
+
+.project-content p {
+  color: #59635b;
+  font-size: 15px;
+  line-height: 1.85;
+  margin: 0 0 26px;
+}
+
+.project-content .project-link {
+  color: var(--green);
+}
+
+/* INSTRUCTIONAL DESIGN */
+
+.learning-section {
+  padding: 105px 0 115px;
+}
+
+.learning-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  background: white;
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease;
+}
+
+.learning-card:hover {
+  box-shadow: 0 15px 35px rgba(36,59,50,0.12);
+}
+
+.learning-visual {
+  background: #e2e8e0;
+  padding: 45px 28px;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.screen-label {
+  color: #866940;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.canvas-frame {
+  width: 100%;
+  background: white;
+  padding: 10px;
+  border: 1px solid #cbd3c9;
+  box-shadow: 0 16px 30px rgba(36,59,50,0.16);
+  transform: rotate(-2deg);
+  transition: transform 0.25s ease;
+}
+
+.learning-card:hover .canvas-frame {
+  transform: rotate(0deg);
+}
+
+.canvas-frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.learning-content {
+  padding: 48px 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.learning-content h3 {
+  font-size: clamp(31px, 3.6vw, 46px);
+  color: var(--green);
+  margin: 25px 0 20px;
+}
+
+.learning-content p {
+  color: #59635b;
+  font-size: 15px;
+  line-height: 1.85;
+  margin: 0 0 25px;
+}
+
+.learning-content .project-link {
+  color: var(--green);
+}
+
+/* CLOSING */
+
+.closing-section {
+  background: #efede6;
+  padding: 75px 0;
+}
+
+.closing-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.closing-inner h2 {
+  color: var(--green);
+  font-size: clamp(30px, 3.8vw, 46px);
+  margin: 13px 0;
+}
+
+.closing-inner p {
+  font-size: 15px;
+  color: #59635b;
+  max-width: 640px;
+  margin: 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 24px;
+  background: var(--green);
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background: var(--green-light);
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--green);
+  color: white;
+  padding: 75px 0 30px;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  padding-bottom: 55px;
+}
+
+footer .eyebrow {
+  color: #d6b984;
+}
+
+footer h2 {
+  font-size: clamp(38px, 5vw, 58px);
+  margin: 18px 0;
+}
+
+footer p {
+  color: #d8e2da;
+  font-size: 16px;
+  max-width: 590px;
+}
+
+.footer-button {
+  display: inline-block;
+  background: var(--gold);
+  color: #1b2c24;
+  text-decoration: none;
+  padding: 15px 27px;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.footer-button:hover {
+  background: #d5b784;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.22);
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  color: #c8d3cb;
+  font-size: 12px;
+}
+
+.footer-bottom a {
+  color: #d6b984;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .hero-grid {
+    gap: 35px;
+  }
+
+  .featured-content,
+  .learning-content {
+    padding: 35px;
+  }
+}
+
+@media (max-width: 700px) {
+  nav {
+    min-height: auto;
+    padding: 20px 0;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .nav-links .nav-contact {
+    padding: 7px 12px;
+  }
+
+  .hero {
+    padding: 60px 0 70px;
+  }
+
+  .hero-grid,
+  .featured-card,
+  .learning-card {
+    grid-template-columns: 1fr;
+  }
+
+  .category-intro {
+    display: block;
+  }
+
+  .category-intro p {
+    margin-top: 20px;
+  }
+
+  .featured-section,
+  .leadership-section,
+  .learning-section {
+    padding: 70px 0;
+  }
+
+  .featured-visual {
+    min-height: 260px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-visual {
+    min-height: 280px;
+  }
+
+  .closing-inner,
+  .footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer {
+    padding-top: 60px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- NAVIGATION -->
 
 <header>
-  <nav>
+  <nav class="container">
+
     <a class="logo" href="index.html">
       Rosetta Lilly
     </a>
 
-    <div class="links">
+    <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="portfolio.html" class="active"
+      <a href="portfolio.html"
+         class="active"
          aria-current="page">Portfolio</a>
       <a href="expertise.html">Expertise</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html"
+         class="nav-contact">Contact</a>
     </div>
+
   </nav>
 </header>
 
-<!-- PORTFOLIO INTRODUCTION -->
+<main>
 
-<div class="hero">
-  <div class="hero-inner">
+<!-- INTRODUCTION -->
 
-    <div class="eyebrow">
-      Leadership | Strategy | Learning Innovation
-    </div>
+<section class="hero">
+  <div class="container hero-grid">
 
-    <h1>Selected Work &amp; Leadership Initiatives</h1>
+    <div>
 
-    <p>
-      My work reflects experience leading programs,
-      managing teams, developing strategic initiatives,
-      and improving organizational processes.
-      These projects highlight my approach to
-      program leadership, curriculum strategy,
-      learning innovation, and measurable results.
-    </p>
+      <div class="eyebrow">
+        Portfolio / Selected Work
+      </div>
 
-  </div>
-</div>
-
-<main class="container">
-
-  <!-- CATEGORY 1: CURRICULUM & PROGRAM DEVELOPMENT -->
-
-  <section class="category" id="program-development">
-
-    <div class="eyebrow">Featured Leadership Project</div>
-
-    <h2>Program Development &amp; Launch</h2>
-
-    <p class="category-intro">
-      Leading the development, launch, and continuous
-      improvement of learning programs. My experience
-      includes strategic planning, curriculum oversight,
-      team coordination, assessment alignment,
-      and program operations.
-    </p>
-
-    <div class="grid">
-
-      <a class="card" href="program-development.html">
-
-        <div class="card-top">
-          Building &amp; Launching Four Online Programs
-        </div>
-
-        <div class="card-body">
-
-          <div class="tag">
-            Program Strategy | Development | Launch
-          </div>
-
-          <h3>Leading Programs from Concept to Implementation</h3>
-
-          <p>
-            Directed the development and launch of
-            four online degree and certificate programs
-            in UX/UI Design and Graphic Design,
-            overseeing curriculum planning,
-            faculty coordination, implementation,
-            and ongoing program operations.
-          </p>
-
-          <span class="card-link">
-            Explore Program Leadership Project &rarr;
-          </span>
-
-        </div>
-      </a>
+      <h1>
+        Ideas developed.
+        <em>Programs delivered.</em>
+      </h1>
 
     </div>
-  </section>
 
-  <!-- CATEGORY 2: LEADERSHIP -->
-
-  <section class="category" id="leadership">
-
-    <div class="eyebrow">Leadership in Action</div>
-
-    <h2>Program Management &amp; Leadership</h2>
-
-    <p class="category-intro">
-      Leading initiatives that bring people, processes,
-      and organizational goals together. My approach
-      focuses on collaboration, problem-solving,
-      continuous improvement, and results.
+    <p class="hero-description">
+      A selection of projects that reflect
+      my experience leading programs,
+      managing teams, developing strategic
+      initiatives, improving operations,
+      and designing learning experiences.
     </p>
-
-    <div class="grid">
-
-      <!-- Designing Change Together -->
-
-      <a class="card" href="designing-change.html">
-
-        <div class="card-top">
-          Designing Change Together
-        </div>
-
-        <div class="card-body">
-
-          <div class="tag">
-            Strategic Initiatives | Leadership
-          </div>
-
-          <h3>Community Partnership Initiative</h3>
-
-          <p>
-            Developed and led an initiative connecting
-            students with nonprofit organizations
-            through real-world projects, aligning
-            learning goals with community needs
-            and professional skill development.
-          </p>
-
-          <span class="card-link">
-            Explore Leadership Project &rarr;
-          </span>
-
-        </div>
-      </a>
-
-      <!-- Student Success -->
-
-      <a class="card" href="student-success.html">
-
-        <div class="card-top">
-          Student Success &amp; Process Improvement
-        </div>
-
-        <div class="card-body">
-
-          <div class="tag">
-            Program Operations | Performance Analytics
-          </div>
-
-          <h3>Data-Informed Program Improvement</h3>
-
-          <p>
-            Led improvements to student support
-            processes by using performance data,
-            coordinating cross-functional teams,
-            and implementing proactive interventions
-            to strengthen program outcomes.
-          </p>
-
-          <span class="card-link">
-            Explore Leadership Project &rarr;
-          </span>
-
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- CATEGORY 3: INSTRUCTIONAL DESIGN -->
-
-  <section class="category" id="instructional-design">
-
-    <div class="eyebrow">Hands-On Learning Expertise</div>
-
-    <h2>Instructional Design &amp; eLearning</h2>
-
-    <p class="category-intro">
-      In addition to program leadership, I bring
-      hands-on experience designing and developing
-      learning experiences. This background allows
-      me to connect strategic program goals
-      with practical instructional solutions.
-    </p>
-
-    <div class="grid">
-
-      <a class="card" href="inclusive-design.html">
-
-        <div class="card-top">
-          Instructional Design &amp; eLearning
-        </div>
-
-        <div class="card-body">
-
-          <div class="tag">
-            Course Development | Canvas LMS | eLearning
-          </div>
-
-          <h3>
-            Online Course &amp; Learning Experience Development
-          </h3>
-
-          <p>
-            Online course development, Canvas LMS design,
-            interactive eLearning, assessment design,
-            and AI-assisted multimedia.
-          </p>
-
-          <span class="card-link">
-            Explore Learning Sample &rarr;
-          </span>
-
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-</main>
-
-<!-- CONTACT SECTION -->
-
-<section class="closing">
-  <div class="closing-inner">
-
-    <h2>Connecting Strategy, People, and Results</h2>
-
-    <p>
-      My experience combines program leadership,
-      curriculum development, and learning technology
-      to support organizational goals and
-      meaningful performance improvement.
-    </p>
-
-    <a class="button" href="contact.html">
-      Let's Connect
-    </a>
 
   </div>
 </section>
 
+<!-- FEATURED PROGRAM DEVELOPMENT -->
+
+<section class="featured-section"
+         id="program-development">
+
+  <div class="container">
+
+    <div class="category-intro">
+
+      <div>
+        <div class="eyebrow">
+          01 / Featured Leadership Project
+        </div>
+
+        <h2>
+          Program Development &amp; Launch
+        </h2>
+      </div>
+
+      <p>
+        Leading the development,
+        implementation, and continuous
+        improvement of learning programs.
+      </p>
+
+    </div>
+
+    <a class="featured-card"
+       href="program-development.html">
+
+      <div class="featured-content">
+
+        <div class="eyebrow">
+          Program Strategy | Development | Launch
+        </div>
+
+        <h3>
+          Building &amp; Launching
+          Four Online Programs
+        </h3>
+
+        <p>
+          Directed the development and launch
+          of four online degree and certificate
+          programs in UX/UI Design and Graphic
+          Design, overseeing curriculum planning,
+          faculty coordination, implementation,
+          and ongoing program operations.
+        </p>
+
+        <span class="project-link">
+          Explore Program Leadership Project &rarr;
+        </span>
+
+      </div>
+
+      <div class="featured-visual">
+
+        <div class="visual-top">
+          From Concept to Implementation
+        </div>
+
+        <div class="visual-bottom">
+          Strategy. Curriculum.
+          People. Execution.
+        </div>
+
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- LEADERSHIP PROJECTS -->
+
+<section class="leadership-section"
+         id="leadership">
+
+  <div class="container">
+
+    <div class="category-intro">
+
+      <div>
+
+        <div class="eyebrow">
+          02 / Leadership in Action
+        </div>
+
+        <h2>
+          Program Management &amp; Leadership
+        </h2>
+
+      </div>
+
+      <p>
+        Connecting people, processes,
+        and organizational goals through
+        collaboration, problem-solving,
+        and continuous improvement.
+      </p>
+
+    </div>
+
+    <div class="project-grid">
+
+      <!-- DESIGNING CHANGE TOGETHER -->
+
+      <a class="project-card"
+         href="designing-change.html">
+
+        <div class="project-art art-community">
+
+          <span class="art-label">
+            Strategic Initiative / Community Partnerships
+          </span>
+
+          <div class="art-title">
+            Learning beyond
+            the classroom.
+          </div>
+
+        </div>
+
+        <div class="project-content">
+
+          <div class="project-category">
+            Strategic Initiatives | Leadership
+          </div>
+
+          <h3>
+            Designing Change Together
+          </h3>
+
+          <p>
+            Developed and led an initiative
+            connecting students with nonprofit
+            organizations through real-world
+            projects, aligning learning goals
+            with community needs and
+            professional skill development.
+          </p>
+
+          <span class="project-link">
+            Explore Leadership Project &rarr;
+          </span>
+
+        </div>
+
+      </a>
+
+      <!-- STUDENT SUCCESS -->
+
+      <a class="project-card"
+         href="student-success.html">
+
+        <div class="project-art art-success">
+
+          <span class="art-label">
+            Program Operations / Performance Analytics
+          </span>
+
+          <div class="art-title">
+            Better processes.
+            Better outcomes.
+          </div>
+
+        </div>
+
+        <div class="project-content">
+
+          <div class="project-category">
+            Program Operations | Performance Analytics
+          </div>
+
+          <h3>
+            Student Success &amp;
+            Process Improvement
+          </h3>
+
+          <p>
+            Led improvements to student
+            support processes by using
+            performance data, coordinating
+            cross-functional teams, and
+            implementing proactive
+            interventions to strengthen
+            program outcomes.
+          </p>
+
+          <span class="project-link">
+            Explore Leadership Project &rarr;
+          </span>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- INSTRUCTIONAL DESIGN -->
+
+<section class="learning-section"
+         id="instructional-design">
+
+  <div class="container">
+
+    <div class="category-intro">
+
+      <div>
+
+        <div class="eyebrow">
+          03 / Hands-On Learning Expertise
+        </div>
+
+        <h2>
+          Instructional Design &amp; eLearning
+        </h2>
+
+      </div>
+
+      <p>
+        Designing and developing online
+        courses, applied learning activities,
+        and digital experiences that
+        connect instructional goals
+        with practical application.
+      </p>
+
+    </div>
+
+    <a class="learning-card"
+       href="inclusive-design.html">
+
+      <div class="learning-visual">
+
+        <span class="screen-label">
+          Selected Canvas Course Design Sample
+        </span>
+
+        <div class="canvas-frame">
+
+          <img
+            src="unv101ux-canvas-home.webp"
+            alt="Canvas course homepage for
+                 Student Success and Technology Foundations"
+            loading="lazy">
+
+        </div>
+
+      </div>
+
+      <div class="learning-content">
+
+        <div class="eyebrow">
+          Course Development | Canvas LMS | eLearning
+        </div>
+
+        <h3>
+          Online Course &amp;
+          Learning Experience Development
+        </h3>
+
+        <p>
+          Online course development,
+          Canvas LMS design, interactive
+          eLearning modules, assessment
+          design, and AI-assisted multimedia.
+        </p>
+
+        <span class="project-link">
+          Explore Learning Projects &rarr;
+        </span>
+
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- CLOSING -->
+
+<section class="closing-section">
+
+  <div class="container closing-inner">
+
+    <div>
+
+      <div class="eyebrow">
+        Connecting Strategy and Learning
+      </div>
+
+      <h2>
+        Leadership informed by
+        hands-on experience.
+      </h2>
+
+      <p>
+        My background combines program
+        leadership, curriculum development,
+        team management, and learning
+        technology to support meaningful
+        organizational outcomes.
+      </p>
+
+    </div>
+
+    <a href="contact.html" class="button">
+      Get in Touch &rarr;
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
 <!-- FOOTER -->
 
 <footer>
-  &copy; 2026 Rosetta Lilly | Professional Portfolio
+
+  <div class="container">
+
+    <div class="footer-main">
+
+      <div>
+
+        <div class="eyebrow">
+          Get In Touch
+        </div>
+
+        <h2>Let's connect.</h2>
+
+        <p>
+          Interested in connecting about
+          program leadership, learning
+          and development, or opportunities
+          to work together?
+        </p>
+
+      </div>
+
+      <a class="footer-button"
+         href="contact.html">
+        Get in Touch &rarr;
+      </a>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <span>
+        &copy; 2026 Rosetta Lilly |
+        Professional Portfolio
+      </span>
+
+      <a href="#program-development">
+        Back to Top &uarr;
+      </a>
+
+    </div>
+
+  </div>
+
 </footer>
 
 </body>
