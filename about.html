@@ -4,248 +4,1065 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>About Me | Rosetta Lilly</title>
+
+  <meta name="description"
+        content="Learn about Rosetta Lilly's background in program
+        leadership, curriculum development, learning
+        technology, and organizational improvement.">
+
   <style>
-    * { box-sizing: border-box; }
+    :root {
+      --green: #243b32;
+      --green-light: #365748;
+      --cream: #f8f6f0;
+      --gold: #bc9a66;
+      --text: #303530;
+      --muted: #626b62;
+      --border: #dedbd2;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
-      background: #f8f6f0;
-      color: #303530;
+      background: var(--cream);
+      color: var(--text);
       font-family: "Segoe UI", Arial, sans-serif;
-      line-height: 1.8;
+      line-height: 1.7;
     }
 
-    header {
-      background: #243b32;
-      color: white;
-      padding: 22px 8%;
+    a {
+      color: inherit;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
+    a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 5px;
     }
 
-    .logo {
-      color: white;
-      font-family: Georgia, serif;
-      font-size: 23px;
-      text-decoration: none;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    nav .links a {
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    nav .links a:hover,
-    nav .links a.active {
-      color: #d6b984;
-    }
-
-    main {
-      max-width: 1150px;
-      margin: auto;
-      padding: 80px 8%;
-    }
-
-    .about-intro {
-      display: grid;
-      grid-template-columns: 1.6fr 1fr;
-      gap: 55px;
-      align-items: center;
+    .container {
+      width: min(1160px, 88%);
+      margin: 0 auto;
     }
 
     .eyebrow {
-      color: #947344;
-      font-size: 12px;
-      letter-spacing: 2px;
+      color: #866940;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.2px;
       text-transform: uppercase;
-      font-weight: bold;
     }
 
-    h1, h2 {
-      font-family: Georgia, serif;
+    h1, h2, h3 {
+      margin-top: 0;
+      font-family: Georgia, "Times New Roman", serif;
       font-weight: normal;
-      line-height: 1.3;
+      line-height: 1.15;
     }
 
-    h1 {
-      font-size: clamp(36px, 5vw, 52px);
-      margin: 15px 0;
+    /* NAVIGATION */
+
+    header {
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
     }
 
-    h2 {
-      font-size: 30px;
-      margin-top: 45px;
+    nav {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
     }
 
-    p { margin-bottom: 20px; }
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 25px;
+      color: var(--green);
+      text-decoration: none;
+      letter-spacing: -0.7px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #8f6d39;
+    }
+
+    .nav-links .nav-contact {
+      background: var(--green);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 3px;
+    }
+
+    .nav-links .nav-contact:hover {
+      background: var(--green-light);
+      color: white;
+    }
+
+    /* INTRODUCTION */
+
+    .about-hero {
+      padding: 90px 0 100px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 85px;
+      align-items: center;
+    }
+
+    .about-hero h1 {
+      font-size: clamp(43px, 5vw, 70px);
+      color: var(--green);
+      letter-spacing: -1.8px;
+      margin: 24px 0;
+    }
+
+    .about-hero h1 em {
+      display: block;
+      color: #897046;
+      font-weight: normal;
+    }
 
     .subtitle {
-      color: #756348;
+      color: #866940;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      margin: 0 0 27px;
+    }
+
+    .about-copy p {
+      color: #535c55;
+      font-size: 16px;
+      line-height: 1.9;
+      margin: 0 0 22px;
+    }
+
+    .about-copy .lead {
+      font-size: 18px;
+      color: var(--green);
+      line-height: 1.8;
+    }
+
+    .about-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 24px;
+      background: var(--green);
+      color: white;
+      font-size: 14px;
       font-weight: 600;
+      text-decoration: none;
+      border-radius: 3px;
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--green-light);
+      transform: translateY(-2px);
+    }
+
+    .text-link {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--green);
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 5px;
+    }
+
+    .text-link:hover {
+      color: #8f6d39;
+    }
+
+    /* PORTRAIT */
+
+    .portrait-area {
+      position: relative;
+      padding: 12px 14px 14px 0;
+    }
+
+    .portrait-background {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 35px;
+      background: #e8e2d6;
     }
 
     .portrait {
+      position: relative;
+      z-index: 1;
+      display: block;
       width: 100%;
-      max-width: 320px;
+      max-width: 440px;
       aspect-ratio: 4 / 5;
       object-fit: cover;
       object-position: center 35%;
-      border-radius: 8px;
-      display: block;
-      margin: auto;
-      box-shadow: 12px 12px 0 #e1d9c9;
+      box-shadow: 0 18px 40px rgba(36,59,50,0.12);
     }
 
-    .highlight {
-      border-left: 3px solid #bc9a66;
-      padding: 15px 25px;
-      margin-top: 35px;
-      background: #eeeae0;
+    .portrait-caption {
+      position: absolute;
+      z-index: 2;
+      bottom: -22px;
+      right: -12px;
+      background: var(--green);
+      color: #e8dfcb;
+      padding: 17px 23px;
+      max-width: 240px;
+      font-family: Georgia, serif;
+      font-size: 19px;
+      line-height: 1.4;
     }
+
+    /* EXPERIENCE SNAPSHOT */
+
+    .impact-strip {
+      background: var(--green);
+      color: white;
+      padding: 43px 0;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    .impact-item {
+      padding: 5px 30px;
+      border-right: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .impact-item:first-child {
+      padding-left: 0;
+    }
+
+    .impact-item:last-child {
+      border-right: none;
+    }
+
+    .impact-number {
+      font-family: Georgia, serif;
+      font-size: clamp(44px, 5vw, 65px);
+      line-height: 1;
+      color: #f5eee1;
+    }
+
+    .impact-item p {
+      color: #d9e2db;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 12px 0 0;
+    }
+
+    /* PROFESSIONAL BACKGROUND */
+
+    .background-section {
+      padding: 105px 0;
+    }
+
+    .background-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 90px;
+      align-items: start;
+    }
+
+    .background-section h2 {
+      color: var(--green);
+      font-size: clamp(36px, 4vw, 52px);
+      letter-spacing: -1px;
+      margin: 17px 0 20px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 370px;
+    }
+
+    .background-copy p {
+      color: #535c55;
+      font-size: 16px;
+      line-height: 1.9;
+      margin: 0 0 23px;
+    }
+
+    .background-points {
+      margin-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .background-point {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 20px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .point-label {
+      color: #866940;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    .point-text {
+      font-size: 15px;
+      color: var(--green);
+      line-height: 1.7;
+    }
+
+    /* LEADERSHIP APPROACH */
+
+    .approach-section {
+      background: #efede6;
+      padding: 100px 0 110px;
+    }
+
+    .approach-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: end;
+      margin-bottom: 40px;
+    }
+
+    .approach-header h2 {
+      color: var(--green);
+      font-size: clamp(38px, 4.3vw, 55px);
+      letter-spacing: -1px;
+      margin: 18px 0 0;
+    }
+
+    .approach-header p {
+      color: #535c55;
+      font-size: 16px;
+      line-height: 1.9;
+      margin: 0;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .approach-card {
+      background: white;
+      padding: 33px 29px;
+      border-top: 3px solid var(--gold);
+    }
+
+    .approach-number {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #927249;
+      margin-bottom: 35px;
+    }
+
+    .approach-card h3 {
+      color: var(--green);
+      font-size: 27px;
+      margin-bottom: 15px;
+    }
+
+    .approach-card p {
+      color: #5a645c;
+      font-size: 14px;
+      line-height: 1.85;
+      margin: 0;
+    }
+
+    /* PERSONAL STATEMENT */
+
+    .statement-section {
+      padding: 90px 0 100px;
+    }
+
+    .statement-inner {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .statement-inner h2 {
+      font-size: clamp(31px, 3.7vw, 46px);
+      color: var(--green);
+      line-height: 1.35;
+      margin: 22px 0 25px;
+    }
+
+    .statement-inner p {
+      color: #59635b;
+      font-size: 16px;
+      line-height: 1.85;
+      max-width: 690px;
+      margin: auto;
+    }
+
+    /* FOOTER */
 
     footer {
-      background: #243b32;
+      background: var(--green);
       color: white;
-      text-align: center;
-      padding: 30px;
+      padding: 85px 0 30px;
+    }
+
+    .footer-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 40px;
+      padding-bottom: 60px;
+    }
+
+    footer .eyebrow {
+      color: #d6b984;
+    }
+
+    footer h2 {
+      font-size: clamp(38px, 5vw, 62px);
+      margin: 18px 0;
+    }
+
+    footer p {
+      max-width: 600px;
+      color: #d8e2da;
+      font-size: 16px;
+    }
+
+    .footer-button {
+      display: inline-block;
+      background: var(--gold);
+      color: #1b2c24;
+      padding: 15px 27px;
+      border-radius: 3px;
+      text-decoration: none;
+      font-weight: 700;
       font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .footer-button:hover {
+      background: #d5b784;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.22);
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      color: #c8d3cb;
+      font-size: 12px;
+    }
+
+    .footer-bottom a {
+      color: #d6b984;
+      text-decoration: none;
+    }
+
+    /* RESPONSIVE DESIGN */
+
+    @media (max-width: 900px) {
+      .about-grid {
+        gap: 45px;
+      }
+
+      .background-grid {
+        gap: 45px;
+      }
+
+      .portrait-caption {
+        right: 0;
+        font-size: 16px;
+      }
     }
 
     @media (max-width: 700px) {
-      .about-intro {
+      nav {
+        padding: 20px 0;
+        min-height: auto;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .nav-links .nav-contact {
+        padding: 7px 12px;
+      }
+
+      .about-hero {
+        padding: 55px 0 75px;
+      }
+
+      .about-grid,
+      .background-grid,
+      .approach-header {
         grid-template-columns: 1fr;
       }
 
-      main { padding: 50px 8%; }
+      .about-hero h1 {
+        font-size: clamp(42px, 10vw, 56px);
+      }
 
-      .links { gap: 12px; }
+      .portrait-area {
+        width: min(100%, 440px);
+        margin: 15px auto 0;
+      }
+
+      .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .impact-item,
+      .impact-item:first-child {
+        padding: 16px 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.22);
+      }
+
+      .impact-item:last-child {
+        border-bottom: none;
+      }
+
+      .background-section,
+      .approach-section,
+      .statement-section {
+        padding: 70px 0;
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .background-point {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .footer-main {
+        display: block;
+      }
+
+      .footer-button {
+        margin-top: 20px;
+      }
+
+      footer {
+        padding-top: 65px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
     }
   </style>
 </head>
+
 <body>
 
+<!-- NAVIGATION -->
+
 <header>
-  <nav>
-    <a class="logo" href="index.html">Rosetta Lilly</a>
-    <div class="links">
+  <nav class="container">
+
+    <a href="index.html" class="logo">
+      Rosetta Lilly
+    </a>
+
+    <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
+      <a href="about.html" class="active"
+         aria-current="page">About</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="expertise.html">Expertise</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-contact">
+        Contact
+      </a>
     </div>
+
   </nav>
 </header>
 
 <main>
-  <div class="about-intro">
-    <div>
-     
-<div class="eyebrow">About Me</div>
 
-<h1>Leadership That Connects People,
-Programs, and Purpose.</h1>
+<!-- INTRODUCTION -->
 
-<p class="subtitle">
-  Program Leadership | Learning & Development |
-  Curriculum Strategy
-</p>
+<section class="about-hero">
+  <div class="container about-grid">
 
-<p>
-  I am a program and learning leader with
-  experience building programs, managing teams,
-  and leading initiatives that improve learning
-  experiences and organizational processes.
-  My background combines strategic planning,
-  program operations, curriculum development,
-  and learning technology.
-</p>
+    <div class="about-copy">
 
-<p>
-  Throughout my career, I have led the
-  development and launch of online programs,
-  managed faculty and program operations,
-  and worked across departments to solve
-  challenges and implement improvements.
-  I believe strong leadership means setting
-  clear goals, supporting people, and making
-  informed decisions that lead to results.
-</p>
+      <div class="eyebrow">
+        About Me / Professional Background
+      </div>
 
-<p>
-  What sets me apart is my ability to see
-  the bigger picture while understanding
-  the details required to make it happen.
-  I can lead a program from concept to
-  implementation, guide teams through
-  change, and use my instructional design
-  background to develop practical solutions.
-</p>
+      <h1>
+        Leading people.
+        <em>Building programs.</em>
+        Making an impact.
+      </h1>
+
+      <p class="subtitle">
+        Program Leadership | Learning &amp; Development |
+        Curriculum Strategy
+      </p>
+
+      <p class="lead">
+        I bring together program leadership,
+        curriculum development, and learning
+        technology to build programs that
+        work for both organizations and
+        the people they serve.
+      </p>
+
+      <p>
+        Throughout my career, I have led the
+        development and launch of online programs,
+        managed faculty and program operations,
+        and worked across departments to solve
+        challenges and implement improvements.
+      </p>
+
+      <p>
+        What sets me apart is my ability to
+        see the bigger picture while understanding
+        the details required to make it happen.
+        I can lead a program from concept to
+        implementation, guide teams through
+        change, and use my instructional design
+        background to develop practical solutions.
+      </p>
+
+      <div class="about-actions">
+
+        <a class="button" href="portfolio.html">
+          Explore My Work
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+
+        <a class="text-link" href="contact.html">
+          Connect With Me
+        </a>
+
+      </div>
 
     </div>
 
-    <div>
+    <!-- PROFESSIONAL PHOTO -->
+
+    <div class="portrait-area">
+
+      <div class="portrait-background"
+           aria-hidden="true"></div>
+
       <img class="portrait"
            src="profile.jpg"
            alt="Portrait of Rosetta Lilly">
+
+      <div class="portrait-caption">
+        Leadership, learning, and the people behind both.
+      </div>
+
     </div>
+
+  </div>
+</section>
+
+<!-- LEADERSHIP SNAPSHOT -->
+
+<section class="impact-strip">
+
+  <div class="container impact-grid">
+
+    <div class="impact-item">
+
+      <div class="impact-number">04</div>
+
+      <p>
+        Online degree and certificate
+        programs developed and launched
+      </p>
+
+    </div>
+
+    <div class="impact-item">
+
+      <div class="impact-number">17</div>
+
+      <p>
+        Faculty members supervised,
+        supported, and developed
+      </p>
+
+    </div>
+
+    <div class="impact-item">
+
+      <div class="impact-number">150</div>
+
+      <p>
+        Students supported at
+        peak program enrollment
+      </p>
+
+    </div>
+
   </div>
 
-  <section>
-    <h2>My Professional Background</h2>
-    <p>
-      My experience includes leading the development
-      and launch of online programs in UX/UI Design,
-      Graphic Design, and Web Design, as well as
-      overseeing curriculum improvements, learning
-      assessments, faculty support, and student success.
-    </p>
+</section>
 
-    <p>
-      I have worked across the full program lifecycle,
-      from planning and implementation through evaluation
-      and continuous improvement. I use learning analytics,
-      stakeholder feedback, and industry expectations
-      to guide decisions and improve outcomes.
-    </p>
+<!-- PROFESSIONAL BACKGROUND -->
 
-    <div class="highlight">
-      I believe effective learning begins with understanding
-      the people it serves, identifying what needs to improve,
-      and building solutions that make a meaningful difference.
+<section class="background-section">
+
+  <div class="container background-grid">
+
+    <div>
+
+      <div class="eyebrow">
+        Experience &amp; Perspective
+      </div>
+
+      <h2>
+        Experience across
+        the full program
+        lifecycle.
+      </h2>
+
+      <p class="section-intro">
+        From developing new programs
+        to supporting teams and
+        improving outcomes, my
+        experience connects planning,
+        implementation, and
+        continuous improvement.
+      </p>
+
     </div>
 
-    <h2>My Leadership Approach</h2>
+    <div class="background-copy">
 
-<p>
-  I take a collaborative, practical approach
-  to leadership. I focus on understanding
-  organizational goals, bringing the right
-  people together, identifying challenges,
-  and developing solutions that work.
-  I value clear communication, accountability,
-  professional growth, and continuous
-  improvement.
-</p>
-  </section>
+      <p>
+        My professional background includes
+        leading the development and launch
+        of online UX/UI Design and Graphic
+        Design degree and certificate
+        programs, along with curriculum
+        development and course design
+        in technology and design education.
+      </p>
+
+      <p>
+        I have worked across the full
+        program lifecycle, including
+        planning, curriculum development,
+        faculty coordination, program
+        operations, assessment, and
+        ongoing evaluation.
+      </p>
+
+      <p>
+        I also use learning analytics,
+        stakeholder feedback, and
+        industry expectations to guide
+        decisions, strengthen learning
+        experiences, and improve outcomes.
+      </p>
+
+      <div class="background-points">
+
+        <div class="background-point">
+
+          <div class="point-label">
+            Leadership
+          </div>
+
+          <div class="point-text">
+            Program development, faculty
+            leadership, operations,
+            and cross-functional coordination.
+          </div>
+
+        </div>
+
+        <div class="background-point">
+
+          <div class="point-label">
+            Learning
+          </div>
+
+          <div class="point-text">
+            Curriculum development,
+            instructional design,
+            assessment alignment,
+            and learning technology.
+          </div>
+
+        </div>
+
+        <div class="background-point">
+
+          <div class="point-label">
+            Improvement
+          </div>
+
+          <div class="point-text">
+            Learning analytics,
+            student success initiatives,
+            quality reviews, and
+            process improvement.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- LEADERSHIP APPROACH -->
+
+<section class="approach-section">
+
+  <div class="container">
+
+    <div class="approach-header">
+
+      <div>
+
+        <div class="eyebrow">
+          How I Work
+        </div>
+
+        <h2>
+          A practical,
+          people-centered
+          approach.
+        </h2>
+
+      </div>
+
+      <p>
+        I believe strong leadership
+        starts with understanding
+        the goal, bringing the right
+        people together, and creating
+        a clear path forward.
+      </p>
+
+    </div>
+
+    <div class="approach-grid">
+
+      <div class="approach-card">
+
+        <span class="approach-number">01 / COLLABORATE</span>
+
+        <h3>
+          Bring people together.
+        </h3>
+
+        <p>
+          I work across teams and departments
+          to understand challenges,
+          build relationships, and
+          develop practical solutions.
+          Clear communication and
+          shared expectations matter.
+        </p>
+
+      </div>
+
+      <div class="approach-card">
+
+        <span class="approach-number">02 / DELIVER</span>
+
+        <h3>
+          Turn plans into action.
+        </h3>
+
+        <p>
+          I focus on moving work forward,
+          coordinating resources,
+          supporting teams, and
+          keeping projects aligned
+          with organizational goals.
+        </p>
+
+      </div>
+
+      <div class="approach-card">
+
+        <span class="approach-number">03 / IMPROVE</span>
+
+        <h3>
+          Learn from the results.
+        </h3>
+
+        <p>
+          I use data, feedback, and
+          experience to understand
+          what is working, identify
+          what needs attention,
+          and make informed improvements.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CLOSING STATEMENT -->
+
+<section class="statement-section">
+
+  <div class="container statement-inner">
+
+    <div class="eyebrow">
+      My Perspective
+    </div>
+
+    <h2>
+      I understand how to lead the work,
+      support the people doing it,
+      and build something that lasts.
+    </h2>
+
+    <p>
+      Whether I am developing a new program,
+      improving a process, or designing
+      a learning experience, my goal is
+      the same: create thoughtful,
+      practical solutions that help
+      people and organizations succeed.
+    </p>
+
+  </div>
+
+</section>
+
 </main>
 
-<footer>
-  &copy; 2026 Rosetta Lilly | Professional Portfolio
+<!-- CONTACT / FOOTER -->
+
+<footer id="contact">
+
+  <div class="container">
+
+    <div class="footer-main">
+
+      <div>
+
+        <div class="eyebrow">
+          Get In Touch
+        </div>
+
+        <h2>
+          Let's connect.
+        </h2>
+
+        <p>
+          Interested in connecting about
+          program leadership, learning and
+          development, or opportunities
+          to work together?
+        </p>
+
+      </div>
+
+      <a class="footer-button" href="contact.html">
+        Get in Touch &rarr;
+      </a>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <span>
+        &copy; 2026 Rosetta Lilly |
+        Professional Portfolio
+      </span>
+
+      <a href="portfolio.html">
+        Explore My Work &rarr;
+      </a>
+
+    </div>
+
+  </div>
+
 </footer>
 
 </body>
